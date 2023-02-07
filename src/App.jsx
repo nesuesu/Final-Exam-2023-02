@@ -31,11 +31,11 @@ function App() {
         <Route path='/questions' element={<Questions />}></Route>
         <Route path='/addquestion' element={<AddQuestionForm />}></Route>
 
-        <Route path='/answers' >
+        <Route path='/answers' element={<p style={{color:'red'}}>No data</p>}>
           <Route path=':questionid' element={<Answers />} />
         </Route>
 
-        <Route path='/addanswer' >
+        <Route path='/addanswer' element={<p style={{color:'red'}}>No data</p>}>
           <Route path=':questionid' element={<AddAnswerForm />} />
         </Route>
         
