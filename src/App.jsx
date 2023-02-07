@@ -27,15 +27,18 @@ function App() {
       <Routes>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
+
         <Route path='/questions' element={<Questions />}></Route>
+        <Route path='/addquestion' element={<AddQuestionForm />}></Route>
 
         <Route path='/answers' >
           <Route path=':questionid' element={<Answers />} />
         </Route>
-        
-        <Route path='/addquestion' element={<AddQuestionForm />}></Route>
 
-        <Route path='/addanswer/:questionid' element={<AddAnswerForm />}></Route>
+        <Route path='/addanswer' >
+          <Route path=':questionid' element={<AddAnswerForm />} />
+        </Route>
+        
 
         <Route path='/*' element={<h1>404 Page not Found</h1>}></Route>
       </Routes>
