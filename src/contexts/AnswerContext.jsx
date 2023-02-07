@@ -51,6 +51,17 @@ const AnswerProvider = ({children}) => {
             });
           }
 
+        // ant pirmo užkrovimo atsisiunčiam visus atsakymus iš json serverio ir įsirašom juos į state kintamąjį answers
+        const getAnswers = async () => {
+            const data = await fetch(url)
+                .then(res => res.json());
+            setAnswers(data);
+        }
+
+        useEffect(() => {
+            getAnswers();
+        }, []);
+
 
     return (
         <AnswerContext.Provider
