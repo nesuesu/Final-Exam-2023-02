@@ -7,7 +7,7 @@ const Answer = ({answer}) => {
 
     return (
         <>
-        <p>question : {questions.find(question => question.id == answer.questionId).question}</p>
+        <p>question : {questions.find(question => question.id === answer.questionId).question}</p>
         <p>answer id: {answer.id} question id: {answer.questionId} user id: {answer.userId}</p>
         <p>{answer.answer}</p>
         </>

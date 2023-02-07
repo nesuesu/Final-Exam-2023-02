@@ -9,7 +9,6 @@ const Answers = () => {
 
     const {questionid} = useParams();
 
-    // alert("Answers questionid -", q);
 
     const { answers } = useContext(AnswerContext);
 
@@ -20,10 +19,11 @@ const Answers = () => {
     }
 
 
-    return (
+    return ( 
         <>
         <h1>Answers</h1>
-        { answers ?
+
+        { (answers) ?
         (answers.filter(answer => answer.questionId.toString() === questionid.toString()).map( (answer,index) => (
             <Answer 
                 answer = {answer}
