@@ -1,6 +1,6 @@
 
 import './App.css';
-import {Routes,Route} from 'react-router-dom';
+import {Routes,Route, useNavigate} from 'react-router-dom';
 
 import Header from './Header';
 import Login from './components/Login';
@@ -11,7 +11,16 @@ import AddQuestionForm from './components/AddQuestionForm';
 import AddAnswerForm from './components/AddAnswerForm';
 import Footer from './Footer';
 
+import { useEffect } from 'react';
+
 function App() {
+
+  const navigateTo = useNavigate();
+
+  useEffect(() => {
+    navigateTo('/questions');
+  },[])
+
   return (
     <>
       <Header />
