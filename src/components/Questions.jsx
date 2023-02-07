@@ -1,5 +1,6 @@
 
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import QuestionContext from "../contexts/QuestionContext";
 
 import Question from "./Question";
@@ -7,6 +8,12 @@ import Question from "./Question";
 const Questions = () => {
 
     const {questions} = useContext(QuestionContext);
+
+    const navigateTo = useNavigate();
+
+    const handleNewQuestion = () => {
+        navigateTo('/addquestion');
+    }
 
     return (
         <>
@@ -21,6 +28,8 @@ const Questions = () => {
         :
         (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
         }
+        <br />
+        <button onClick={handleNewQuestion}>Add Your Question</button>
         </>
     );
 }
