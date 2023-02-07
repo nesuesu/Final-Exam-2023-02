@@ -43,8 +43,8 @@ const QuestionProvider = ({children}) => {
           }
           
           
-          // funkcija, kuri pakeičią serveryje klausimą pagal id
-          const updateQuestion = (id, updatedQuestion) => {
+        // funkcija, kuri pakeičią serveryje klausimą pagal id
+        const updateQuestion = (id, updatedQuestion) => {
             fetch(url+"/"+id, {
                 method: "PATCH",
                 headers: {'Content-Type': 'application/json'},
@@ -54,7 +54,7 @@ const QuestionProvider = ({children}) => {
 
         // ant pirmo užkrovimo atsisiunčiam visus klausimus iš json serverio ir įsirašom juos į state kintamąjį questions
         const getQuestions = async () => {
-            const data = await fetch('http://localhost:5000/questions')
+            const data = await fetch(url)
                 .then(res => res.json());
             setQuestions(data);
         }
