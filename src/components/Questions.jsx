@@ -1,13 +1,17 @@
 
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import QuestionContext from "../contexts/QuestionContext";
+import UserContext from "../contexts/UserContext";
+
+import { useNavigate } from "react-router-dom";
+
 
 import Question from "./Question";
 
 const Questions = () => {
 
     const {questions} = useContext(QuestionContext);
+    const {loggedInUser} = useContext(UserContext);
 
     const navigateTo = useNavigate();
 
@@ -18,7 +22,8 @@ const Questions = () => {
     return (
         <>
         <h1>Questions</h1>
-        <button onClick={handleNewQuestion}>Add Your Question</button>
+        {loggedInUser && <button onClick={handleNewQuestion}>Add Your Question</button>}
+        
         {questions ?
         (questions.map( (question,index) => (
                 <Question
