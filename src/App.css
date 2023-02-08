@@ -1,0 +1,11 @@
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.question {
+    border: 1px solid black;
+    padding: 15px;
+}

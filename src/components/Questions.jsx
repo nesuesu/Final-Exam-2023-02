@@ -21,19 +21,21 @@ const Questions = () => {
 
     return (
         <>
-        <h1>Questions</h1>
+        {/* <h1>Questions</h1> */}
         {loggedInUser && <button onClick={handleNewQuestion}>Add Your Question</button>}
-        
-        {questions ?
-        (questions.map( (question,index) => (
-                <Question
-                    key = {index}
-                    question = {question}
-                />
-                )))
-        :
-        (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
-        }
+        <div className="questions">
+            {questions ?
+            (questions.map( (question,index) => (
+                    <Question
+                        key = {index}
+                        question = {question}
+                        index = {index}
+                    />
+                    )))
+            :
+            (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
+            }
+        </div>
         </>
     );
 }

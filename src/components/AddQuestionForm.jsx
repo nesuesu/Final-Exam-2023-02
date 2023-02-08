@@ -2,12 +2,14 @@ import { useContext } from "react";
 import QuestionContext from "../contexts/QuestionContext";
 import UserContext from "../contexts/UserContext";
 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const AddQuestionForm = () => {
 
     const {addQuestion} = useContext(QuestionContext);
     const {loggedInUser} = useContext(UserContext);
+
+    const {questionid} = useParams(); 
 
     const navigateTo = useNavigate();
 
@@ -18,7 +20,7 @@ const AddQuestionForm = () => {
             "id":Date.now(),
             "title":e.target.title.value,
             "question":e.target.question.value,
-            "userId":loggedInUser.id,
+            "userId": loggedInUser.id,
             "likesno": 0,
             "edited": false,
         }
