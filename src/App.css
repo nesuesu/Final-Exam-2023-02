@@ -1,0 +1,19 @@
+
+/* ----------HEADER----------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
