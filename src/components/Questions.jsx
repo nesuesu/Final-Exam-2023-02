@@ -17,7 +17,8 @@ const Questions = () => {
 
     return (
         <>
-        {/* <h1>Questions</h1> */}
+        <h1>Questions</h1>
+        <button onClick={handleNewQuestion}>Add Your Question</button>
         {questions ?
         (questions.map( (question,index) => (
                 <Question
@@ -28,8 +29,6 @@ const Questions = () => {
         :
         (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
         }
-        <br />
-        <button onClick={handleNewQuestion}>Add Your Question</button>
         </>
     );
 }
