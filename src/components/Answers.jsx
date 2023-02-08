@@ -30,22 +30,22 @@ const Answers = () => {
         <>
 
         <h2>{questions && questions.find(question => question.id == questionid).question}</h2>
+        
+        <div className="answers">
+            { (answers) ?
+            (answers.filter(answer => answer.questionId.toString() === questionid.toString()).map( (answer,index) => (
+                <Answer 
+                    answer = {answer}
+                    key = {index}
+                    index = {index}
+                />
+            )))
+            :
+            (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
+            }
+        </div>
 
-        { (answers) ?
-        (answers.filter(answer => answer.questionId.toString() === questionid.toString()).map( (answer,index) => (
-            <Answer 
-                answer = {answer}
-                key = {index}
-                index = {index}
-            />
-        )))
-        :
-        (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
-        }
-        {loggedInUser && <button onClick={handleNewAnswer}>Add Your Answer</button>
-
-        }
-
+        {loggedInUser && <button onClick={handleNewAnswer}>Add Your Answer</button>}
         </>
     );
 }

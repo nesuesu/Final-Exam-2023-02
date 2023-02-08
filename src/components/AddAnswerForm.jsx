@@ -17,7 +17,6 @@ const AddAnswerForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.answer.value);
 
         const newRecord = {
             "id":Date.now(),
