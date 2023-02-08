@@ -21,7 +21,7 @@ const Login = () => {
         password: Yup
             .string('Must be a string')
             .required('Password is required')
-            .min(3, 'Please enter 3 or more symbols'),
+            .min(3, 'Please enter at least 3 symbols'),
       });
     
       const formik = useFormik({
@@ -55,6 +55,7 @@ const Login = () => {
                     placeholder="Enter your username"
                     value={formik.values.username}
                     onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                 />
             </label>
             {formik.touched.username && formik.errors.username ? (
@@ -69,6 +70,7 @@ const Login = () => {
                     placeholder="Enter your password"
                     value={formik.values.password}
                     onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                 />
             </label>
             {formik.touched.password && formik.errors.password ? (
