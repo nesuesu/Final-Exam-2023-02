@@ -1,10 +1,15 @@
 import { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import AnswerContext from "../contexts/AnswerContext";
+import UserContext from "../contexts/UserContext";
+
+import { useNavigate, useParams } from "react-router-dom";
+
 
 const AddAnswerForm = () => {
 
     const {addAnswer} = useContext(AnswerContext);
+
+    const {loggedInUser} = useContext(UserContext);
 
     const {questionid} = useParams(); 
 
@@ -18,6 +23,9 @@ const AddAnswerForm = () => {
             "id":Date.now(),
             "questionId":questionid,
             "answer":e.target.answer.value,
+            "userId": loggedInUser.id,
+            "likesno": 0,
+            "edited": false
         }
         addAnswer(newRecord);
         navigateTo(-1);
