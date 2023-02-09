@@ -12,7 +12,7 @@ const Answer = ({answer,index}) => {
     const navigateTo = useNavigate();
  
     const handleEdit = () => {
-        alert('EDITED');
+        navigateTo(`/editanswer/${answer.id}`);
     }
     
     const handleRemove = () => {

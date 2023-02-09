@@ -9,6 +9,7 @@ import Questions from './components/Questions';
 import Answers from './components/Answers';
 import AddQuestionForm from './components/AddQuestionForm';
 import AddAnswerForm from './components/AddAnswerForm';
+import EditAnswerForm from './components/EditAnswerForm';
 import Footer from './Footer';
 
 import { useEffect } from 'react';
@@ -37,6 +38,9 @@ function App() {
 
         <Route path='/addanswer' >
           <Route path=':questionid' element={<AddAnswerForm />} />
+        </Route>
+        <Route path='/editanswer' >
+          <Route path=':answerid' element={<EditAnswerForm />} />
         </Route>
         
 
