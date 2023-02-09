@@ -23,7 +23,8 @@ const AddAnswerForm = () => {
             "questionId":questionid,
             "answer":e.target.answer.value,
             "userId": loggedInUser.id,
-            "likesno": 0,
+            "likedusers": [],
+            "dislikedusers": [],
             "edited": false
         }
         addAnswer(newRecord);
