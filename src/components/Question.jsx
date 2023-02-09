@@ -9,7 +9,7 @@ const Question = ({question, index}) => {
 
     const {loggedInUser} = useContext(UserContext);
 
-    const {deleteQuestion} = useContext(QuestionContext);
+    const {deleteQuestion, editQuestion} = useContext(QuestionContext);
 
     const navigateTo = useNavigate();
 
@@ -26,13 +26,54 @@ const Question = ({question, index}) => {
         deleteQuestion(question.id);
     }
 
+    const handleLike = () => {
+        const likedarr = question.likedusers;
+        const dislikedarr = question.dislikedusers;
+
+        if (!likedarr.includes(loggedInUser.id)) {
+            const likecount = likedarr.push(loggedInUser.id);
+
+            if (dislikedarr.includes(loggedInUser.id)) {
+                const index = dislikedarr.indexOf(loggedInUser.id);
+                dislikedarr.splice(index,1);
+            }
+
+            editQuestion(question.id, {
+                likedusers:likedarr,
+                dislikedusers:dislikedarr,
+            });
+        }
+    }
+
+    const handleDislike = () => {
+        // editAnswer(answer.id, {likesno:(answer.likesno-1)});
+        const dislikedarr = question.dislikedusers;
+        const likedarr = question.likedusers;
+
+        if (!dislikedarr.includes(loggedInUser.id)) {
+            const dislikecount = dislikedarr.push(loggedInUser.id);
+
+            if (likedarr.includes(loggedInUser.id)) {
+                const index = likedarr.indexOf(loggedInUser.id);
+                likedarr.splice(index,1);
+            }
+
+            editQuestion(question.id, {
+                dislikedusers:dislikedarr,
+                likedusers:likedarr,
+            });
+        }
+    }
+
+
     return (
         <>
         <div className="question">
             <h3>{index+1}) {question.question}</h3>
             <p>Title: {question.title}</p>
             <p>question id: {question.id} user id: {question.userId}</p>
-            <p style={{color:'red'}}>likes: {question.likesno} edited: {question.edited ? 'yes' : 'no'} </p>
+            <p style={{color:'red'}}>likes: {question.likedusers.length} dislikes: {question.dislikedusers.length} </p>
+            <p style={{color:'blue'}}>edited: {question.edited ? 'yes' : 'no'}</p>
             <p>Date : { new Date(question.id).toLocaleDateString('LT')} {new Date(question.id).toLocaleTimeString('LT')}</p>
             <button onClick={handleAnswers}>Show Answers to the Question</button>
             { (loggedInUser && question.userId.toString() === loggedInUser.id.toString()) && 
@@ -44,8 +85,8 @@ const Question = ({question, index}) => {
             
             { (loggedInUser) && 
                 <div>
-                    <button>Like</button>
-                    <button>Dislike</button>
+                    <button onClick={handleLike}>Like</button>
+                    <button onClick={handleDislike}>Dislike</button>
                 </div>
             }
         </div>
