@@ -28,7 +28,7 @@
       "title": "Animals",
       "question": "What animals turn white in winter?",
       "userId": 1,
-      "likesno": 0,
+      "likesno": 5,
       "edited": "false"
     },
     {
@@ -36,7 +36,7 @@
       "title": "Animals",
       "question": "Are there glowing animals?",
       "userId": 1,
-      "likesno": 0,
+      "likesno": 15,
       "edited": "false"
     },
     {
@@ -44,7 +44,7 @@
       "title": "Insects",
       "question": "Can insects hear with their feet?",
       "userId": 2,
-      "likesno": 0,
+      "likesno": 3,
       "edited": "false"
     },
     {
@@ -52,7 +52,7 @@
       "title": "Insects",
       "question": "Why don't spiders get caught in their web?",
       "userId": 3,
-      "likesno": 0,
+      "likesno": 21,
       "edited": "false"
     },
     {
@@ -60,7 +60,7 @@
       "title": "Reptiles",
       "question": "How to distinguish a viper from a snake?",
       "userId": 1,
-      "likesno": 0,
+      "likesno": 7,
       "edited": "false"
     },
     {
@@ -68,7 +68,7 @@
       "title": "Fish",
       "question": "Who is heavier - an elephant or a big shark?",
       "userId": 2,
-      "likesno": 0,
+      "likesno": 2,
       "edited": "false"
     },
     {
@@ -76,7 +76,7 @@
       "title": "Birds",
       "question": "Can birds measure temperature?",
       "userId": 2,
-      "likesno": 0,
+      "likesno": 50,
       "edited": "false"
     },
     {
@@ -84,7 +84,7 @@
       "title": "Record holders of the animal world",
       "question": "Which animal is the smartest?",
       "userId": 3,
-      "likesno": 0,
+      "likesno": 32,
       "edited": "false"
     }
   ],
