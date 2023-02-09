@@ -7,7 +7,7 @@ import {useNavigate} from 'react-router-dom';
 
 const Answer = ({answer,index}) => {
 
-    const {deleteAnswer} = useContext(AnswerContext);
+    const {deleteAnswer, editAnswer} = useContext(AnswerContext);
 
     const { questions } = useContext(QuestionContext);
 
@@ -23,6 +23,47 @@ const Answer = ({answer,index}) => {
         deleteAnswer(answer.id);
     }
 
+    const handleLike = () => {
+        const likedarr = answer.likedusers;
+        const dislikedarr = answer.dislikedusers;
+
+        if (!likedarr.includes(loggedInUser.id)) {
+            const likecount = likedarr.push(loggedInUser.id);
+
+            if (dislikedarr.includes(loggedInUser.id)) {
+                const index = dislikedarr.indexOf(loggedInUser.id);
+                dislikedarr.splice(index,1);
+            }
+
+            editAnswer(answer.id, {
+                likedusers:likedarr,
+                dislikedusers:dislikedarr,
+            });
+        }
+    }
+
+    const handleDislike = () => {
+        // editAnswer(answer.id, {likesno:(answer.likesno-1)});
+        const dislikedarr = answer.dislikedusers;
+        const likedarr = answer.likedusers;
+
+        if (!dislikedarr.includes(loggedInUser.id)) {
+            const dislikecount = dislikedarr.push(loggedInUser.id);
+
+            if (likedarr.includes(loggedInUser.id)) {
+                const index = likedarr.indexOf(loggedInUser.id);
+                likedarr.splice(index,1);
+            }
+
+            editAnswer(answer.id, {
+                dislikedusers:dislikedarr,
+                likedusers:likedarr,
+            });
+        }
+
+
+    }
+
     return (
         <>
         <div className="answer">
@@ -30,7 +71,8 @@ const Answer = ({answer,index}) => {
             <h3>{index+1}) {answer.answer}</h3>
 
             <p>answer id: {answer.id} question id: {answer.questionId} user id: {answer.userId}</p>
-            <p style={{color:'red'}}>likes: {answer.likesno} edited: {answer.edited ? 'yes' : 'no'} </p>
+            <p style={{color:'red'}}>likes: {answer.likedusers.length} dislikes: {answer.dislikedusers.length} </p>
+            <p style={{color:'blue'}}>edited: {answer.edited ? 'yes' : 'no'}</p>
             <p>Date : { new Date(answer.id).toLocaleDateString('LT')} {new Date(answer.id).toLocaleTimeString('LT')}</p>
 
             { (loggedInUser && answer.userId.toString() === loggedInUser.id.toString()) && 
@@ -42,8 +84,8 @@ const Answer = ({answer,index}) => {
 
             { (loggedInUser) && 
             <div>
-                <button>Like</button>
-                <button>Dislike</button>
+                <button onClick={handleLike}>Like</button>
+                <button onClick={handleDislike}>Dislike</button>
             </div>
             }
         </div>
