@@ -3,11 +3,13 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import QuestionContext from "../contexts/QuestionContext";
 
+import { useState, useEffect } from "react";
+
 import Question from "./Question";
 
 const Questions = () => {
 
-    const {questions} = useContext(QuestionContext);
+    const {questions, setQuestions} = useContext(QuestionContext);
 
     const navigateTo = useNavigate();
 
@@ -15,16 +17,17 @@ const Questions = () => {
         navigateTo('/addquestion');
     }
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const [sort, order] = [e.target.sort.value, e.target.order.value]
-        console.log('sort by:', sort, 'order: ', order);
-        const sorted = questions;
-         
+
+    const [selected, setSelected] = useState('date');
+
+    const handleChange = event => {
+        console.log(event.target.value);
+        setSelected(event.target.value);
+
         let sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
 
-        if (order === 'asc') {
-            switch (sort) {
+        if (selectedOrder === 'asc') {
+            switch (event.target.value) {
                 case ('date'):
                     sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
                     break;
@@ -35,8 +38,8 @@ const Questions = () => {
                     sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
                     break;
             }
-        } else if (order === 'desc') {
-            switch (sort) {
+        } else if (selectedOrder === 'desc') {
+            switch (event.target.value) {
                 case ('date'):
                     sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
                     break;
@@ -48,29 +51,39 @@ const Questions = () => {
                     break;
             }
         }
-        
+        const sorted = [...questions];
         sorted.sort(sorter);
-        console.log('by:', sort, sorted);
-    }
+        setQuestions(sorted);
+    };
+
+    
+    const [selectedOrder, setSelectedOrder] = useState('asc');
+
+    const handleChangeOrder = event => {
+        console.log(event.target.value);
+        setSelectedOrder(event.target.value);
+    };
+
 
     return (
         <>
         
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="">Sort by: 
-            <select name="sort" id="">
-                {/* <option value="none">none</option> */}
-                <option value="date">by date</option>
-                <option value="title">by title</option>
-                <option value="likes">by likes no</option>
-            </select>
-            <select name="order" id="">
-                {/* <option value="none">none</option> */}
-                <option value="asc">ascending</option>
-                <option value="desc">descending</option>
-            </select>
+        <form >
+            <label htmlFor="">Order:
+                <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
+                    <option value="asc">ascending</option>
+                    <option value="desc">descending</option>
+                </select>
             </label>
-            <input type="submit" />
+
+            <label htmlFor="">Sort by: 
+                <select values={selected} onChange={handleChange} name="sort" id="">
+                {/* <select  onChange={(e) => setSortType(e.target.value)} name="sort" id=""> */}
+                    <option value="date" >by date</option>
+                    <option value="title" >by title</option>
+                    <option value="likes" >by likes no</option>
+                </select>
+            </label>
         </form>
 
         <h1>Questions</h1>
