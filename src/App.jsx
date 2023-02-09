@@ -8,6 +8,7 @@ import Register from './components/Register';
 import Questions from './components/Questions';
 import Answers from './components/Answers';
 import AddQuestionForm from './components/AddQuestionForm';
+import EditQuestionForm from './components/EditQuestionForm';
 import AddAnswerForm from './components/AddAnswerForm';
 import Footer from './Footer';
 
@@ -30,6 +31,7 @@ function App() {
 
         <Route path='/questions' element={<Questions />}></Route>
         <Route path='/addquestion' element={<AddQuestionForm />}></Route>
+        <Route path='/editquestion/:questionid' element={<EditQuestionForm />}></Route>
 
         <Route path='/answers' >
           <Route path=':questionid' element={<Answers />} />

@@ -16,7 +16,7 @@ const Question = ({question, index}) => {
     }
 
     const handleEdit = () => {
-        alert('EDITED');
+        navigateTo(`/editquestion/`+question.id);
     }
 
     const handleRemove = () => {
