@@ -2,11 +2,14 @@ import { useContext } from "react";
 import UserContext from "../contexts/UserContext";
 
 import { useNavigate } from "react-router-dom";
+import QuestionContext from "../contexts/QuestionContext";
 
 
 const Question = ({question, index}) => {
 
     const {loggedInUser} = useContext(UserContext);
+
+    const {deleteQuestion} = useContext(QuestionContext);
 
     const navigateTo = useNavigate();
 
@@ -20,7 +23,7 @@ const Question = ({question, index}) => {
     }
 
     const handleRemove = () => {
-        alert('REMOVED');
+        deleteQuestion(question.id);
     }
 
     return (
