@@ -24,6 +24,7 @@ const AddQuestionForm = () => {
             "likedusers": [],
             "dislikedusers": [],
             "edited": false,
+            "answerno": 0,
         }
 
         addQuestion(newRecord);
