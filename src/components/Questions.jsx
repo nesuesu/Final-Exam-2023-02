@@ -38,7 +38,7 @@ const Questions = () => {
                     sorter = (a, b) => a.title > b.title ? 1 : ( (a.title < b.title) ? -1 : 0 );
                     break;
                 case ('likes'):
-                    sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
+                    sorter = (a, b) => a.likedusers.length > b.likedusers.length ? 1 : ( (a.likedusers.length < b.likedusers.length) ? -1 : 0 );
                     break;
                 case ('answer'):
                     sorter = (a, b) => a.answerno > b.answerno ? 1 : ( (a.answerno < b.answerno) ? -1 : 0 );
@@ -55,7 +55,7 @@ const Questions = () => {
                     sorter = (a, b) => a.title < b.title ? 1 : ( (a.title > b.title) ? -1 : 0 );
                     break;
                 case ('likes'):
-                    sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
+                    sorter = (a, b) => a.likedusers.length < b.likedusers.length ? 1 : ( (a.likedusers.length > b.likedusers.length) ? -1 : 0 );
                     break;
                 case ('answers'):
                     sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
@@ -105,10 +105,10 @@ const Questions = () => {
         if (selected === 'likes') {
             switch (event.target.value) {
                 case ('asc'):
-                    sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
+                    sorter = (a, b) => a.likedusers.length > b.likedusers.length ? 1 : ( (a.likedusers.length < b.likedusers.length) ? -1 : 0 );
                     break;
                 case ('desc'):
-                    sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
+                    sorter = (a, b) => a.likedusers.length < b.likedusers.length ? 1 : ( (a.likedusers.length > b.likedusers.length) ? -1 : 0 );
                     break;
                 default:
                     break;

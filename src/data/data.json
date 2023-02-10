@@ -42,7 +42,8 @@
       "question": "Are there glowing animals?",
       "userId": 1,
       "likedusers": [
-        1
+        1,
+        2
       ],
       "dislikedusers": [],
       "edited": false,
@@ -110,7 +111,9 @@
       "question": "Which animal is the smartest?",
       "userId": 3,
       "likedusers": [
-        1
+        1,
+        3,
+        2
       ],
       "dislikedusers": [],
       "edited": false,
