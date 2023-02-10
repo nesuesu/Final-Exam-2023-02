@@ -5,22 +5,22 @@
       "username": "aaa",
       "email": "one@aaa.com",
       "password": "123",
-      "avatar":"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"
+      "avatar": "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"
     },
     {
       "id": 2,
       "username": "bbb",
       "email": "two@bbb.com",
       "password": "456",
-      "avatar":"https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png"
+      "avatar": "https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png"
     },
     {
       "id": 3,
       "username": "ccc",
       "email": "three@ccc.com",
       "password": "789",
-      "avatar":"https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
-    }    
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+    }
   ],
   "questions": [
     {
@@ -28,64 +28,87 @@
       "title": "Animals",
       "question": "What animals turn white in winter?",
       "userId": 1,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 2,
       "title": "Animals",
       "question": "Are there glowing animals?",
       "userId": 1,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 3,
       "title": "Insects",
       "question": "Can insects hear with their feet?",
       "userId": 2,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 4,
       "title": "Insects",
       "question": "Why don't spiders get caught in their web?",
       "userId": 3,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 5,
       "title": "Reptiles",
       "question": "How to distinguish a viper from a snake?",
       "userId": 1,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 6,
       "title": "Fish",
       "question": "Who is heavier - an elephant or a big shark?",
       "userId": 2,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 7,
       "title": "Birds",
       "question": "Can birds measure temperature?",
       "userId": 2,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 8,
       "title": "Record holders of the animal world",
       "question": "Which animal is the smartest?",
       "userId": 3,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [
+        1
+      ],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1675952295028,
+      "title": "Mano klausimas",
+      "question": "Kaip Tau sekasi???",
+      "userId": 1,
+      "likedusers": [
+        1
+      ],
+      "dislikedusers": [
+        2
+      ],
+      "edited": 1675952452948
     }
   ],
   "answers": [
@@ -94,24 +117,27 @@
       "questionId": 1,
       "answer": "Everyone knows that the hare turns white in winter. That's what they call him - a white hare. But he must not be this way by winter. The fur of the fox, ermine and weasel becomes white. Partridge turns white among the birds. But the polar bear and polar owl are white all year round.",
       "userId": 2,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 2,
       "questionId": 2,
       "answer": "Yes. And they are not few. Most of all luminous animals live in the seas and oceans. Glow in the dark jellyfish, coral polyps, cephalopods, ciliates-night-lighters and many deep-sea fish. Among the inhabitants of the land, the well-known firefly beetles glow.",
       "userId": 3,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 3,
       "questionId": 3,
       "answer": "Grasshoppers have such amazing abilities. The organs of hearing are located on their shins of the front legs.",
       "userId": 1,
-      "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 4,
@@ -119,7 +145,9 @@
       "answer": "Spiders make two kinds of webs. Some are sticky, into which various insects fall. Others are not sticky. Spiders move along them. It happens that a spider gets into a sticky cobweb, but gets out of it thanks to the fatty coating on its body.",
       "userId": 2,
       "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 5,
@@ -127,7 +155,9 @@
       "answer": "The pupil of a snake is round, while that of a viper is like a slit and is located vertically. These snakes differ in color. On the back of the viper, a zigzag pattern is clearly visible. Although there are one-colored vipers. But their main difference is that there are bright yellow spots on the sides of the snake's head, while the viper does not have them.",
       "userId": 3,
       "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 6,
@@ -135,7 +165,9 @@
       "answer": "It may seem strange, but the weight of a large shark is many times greater than the weight of a large elephant. An elephant weighs only 6 tons. But big whale sharks come across weighing up to 30 tons!",
       "userId": 3,
       "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 7,
@@ -143,7 +175,9 @@
       "answer": "One of the birds, although it does not incubate eggs, still cares about the temperature in the incubator nest. They measure the temperature... What do you think? Beak! These amazing birds are called Australian weed chickens.",
       "userId": 1,
       "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     },
     {
       "id": 8,
@@ -151,7 +185,9 @@
       "answer": "Many scholars debate this issue. The most intelligent include several animals. This is a killer whale and many species of dolphins. Elephants and pigs are also considered very smart. Yet the most intelligent are primates (chimpanzees, gorillas, orangutans, baboons, gibbons and monkeys). They have a large, complex brain, can communicate with each other, and they have developed certain language skills, they know how to learn some actions and use objects as tools (for example, dig the ground with a stick or knock fruit from trees with it).",
       "userId": 2,
       "likesno": 0,
-      "edited": "false"
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     }
   ]
 }

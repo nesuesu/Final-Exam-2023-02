@@ -14,14 +14,17 @@ const QuestionProvider = ({children}) => {
 
     const addQuestion = (newQuestion) => {
         setQuestions([...questions, newQuestion]);
+        postQuestion(newQuestion);
     }
 
     const deleteQuestion = (id) => {
         setQuestions(questions.filter(question => question.id.toString() !== id.toString()));
+        removeQuestion(id);
       }
 
     const editQuestion = (id, updatedQuestion) => {
         setQuestions(questions.map(question => (question.id.toString() === id.toString()) ? {...question, ...updatedQuestion} : question));
+        updateQuestion(id,updatedQuestion);
     }
 
     // CRUD FUNCTIONS

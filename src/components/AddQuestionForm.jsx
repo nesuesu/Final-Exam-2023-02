@@ -1,10 +1,13 @@
 import { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import QuestionContext from "../contexts/QuestionContext";
+import UserContext from "../contexts/UserContext";
+
+import { useNavigate, useParams } from "react-router-dom";
 
 const AddQuestionForm = () => {
 
     const {addQuestion} = useContext(QuestionContext);
+    const {loggedInUser} = useContext(UserContext);
 
     const {questionid} = useParams(); 
 
@@ -12,13 +15,17 @@ const AddQuestionForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.question.value);
 
         const newRecord = {
             "id":Date.now(),
             "title":e.target.title.value,
             "question":e.target.question.value,
+            "userId": loggedInUser.id,
+            "likedusers": [],
+            "dislikedusers": [],
+            "edited": false,
         }
+
         addQuestion(newRecord);
         navigateTo('/questions');
 
