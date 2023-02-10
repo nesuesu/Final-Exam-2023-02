@@ -100,6 +100,14 @@ const Questions = () => {
         setQuestions(sorted);
     };
 
+        // const [selectedFilter, setSelectedFilter] = useState('all');
+
+        const handleOnSubmit = (e) => {
+            e.preventDefault();
+            console.log(e.target.value);
+
+        }
+
 
     return (
         <>
@@ -121,7 +129,18 @@ const Questions = () => {
                     <option value="desc">descending</option>
                 </select>
             </label>
-            
+        </form>
+
+
+        <form onSubmit={handleOnSubmit}>
+            <label htmlFor="">Filter:
+                <select name="filter" id="">
+                    <option value="all">All Questions</option>
+                    <option value="answered">Answered Questions</option>
+                    <option value="unanswered">Unanswered Questions</option>
+                </select>
+            </label>
+            <input type="submit" />
         </form>
 
         <h1>Questions</h1>
