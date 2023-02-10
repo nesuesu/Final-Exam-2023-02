@@ -30,7 +30,8 @@
       "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 2,
@@ -39,7 +40,8 @@
       "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 3,
@@ -48,7 +50,8 @@
       "userId": 2,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 4,
@@ -57,7 +60,8 @@
       "userId": 3,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 5,
@@ -66,7 +70,8 @@
       "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 6,
@@ -75,7 +80,8 @@
       "userId": 2,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 7,
@@ -84,7 +90,8 @@
       "userId": 2,
       "likedusers": [],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 8,
@@ -95,7 +102,8 @@
         1
       ],
       "dislikedusers": [],
-      "edited": false
+      "edited": false,
+      "answerno": 1
     },
     {
       "id": 1675952295028,
@@ -108,7 +116,8 @@
       "dislikedusers": [
         2
       ],
-      "edited": 1675952452948
+      "edited": 1675952452948,
+      "answerno": 0
     }
   ],
   "answers": [
@@ -118,7 +127,9 @@
       "answer": "Everyone knows that the hare turns white in winter. That's what they call him - a white hare. But he must not be this way by winter. The fur of the fox, ermine and weasel becomes white. Partridge turns white among the birds. But the polar bear and polar owl are white all year round.",
       "userId": 2,
       "likedusers": [],
-      "dislikedusers": [],
+      "dislikedusers": [
+        1
+      ],
       "edited": false
     },
     {
@@ -185,6 +196,47 @@
       "answer": "Many scholars debate this issue. The most intelligent include several animals. This is a killer whale and many species of dolphins. Elephants and pigs are also considered very smart. Yet the most intelligent are primates (chimpanzees, gorillas, orangutans, baboons, gibbons and monkeys). They have a large, complex brain, can communicate with each other, and they have developed certain language skills, they know how to learn some actions and use objects as tools (for example, dig the ground with a stick or knock fruit from trees with it).",
       "userId": 2,
       "likesno": 0,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1675953490821,
+      "questionId": "1",
+      "answer": "i don't know",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [
+        1,
+        3
+      ],
+      "edited": false
+    },
+    {
+      "id": 1676014131922,
+      "questionId": "1",
+      "answer": "trecias atsakymas",
+      "userId": 3,
+      "likedusers": [
+        3
+      ],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676014200577,
+      "questionId": "1",
+      "answer": "ketvirtas",
+      "userId": 3,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676014585301,
+      "questionId": "2",
+      "answer": "I don't know",
+      "userId": 2,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false

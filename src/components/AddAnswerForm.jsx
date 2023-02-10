@@ -1,10 +1,19 @@
 import { useContext } from "react";
-import { useNavigate, useParams } from "react-router-dom";
 import AnswerContext from "../contexts/AnswerContext";
+import QuestionContext from "../contexts/QuestionContext";
+import UserContext from "../contexts/UserContext";
+
+import { useNavigate, useParams } from "react-router-dom";
+
+
 
 const AddAnswerForm = () => {
 
-    const {addAnswer} = useContext(AnswerContext);
+    const {answers, addAnswer} = useContext(AnswerContext);
+
+    const {editQuestion} = useContext(QuestionContext);
+
+    const {loggedInUser} = useContext(UserContext);
 
     const {questionid} = useParams(); 
 
@@ -12,14 +21,23 @@ const AddAnswerForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e.target.answer.value);
 
-        const newRecord = {
+        const newAnswer = {
             "id":Date.now(),
             "questionId":questionid,
             "answer":e.target.answer.value,
+            "userId": loggedInUser.id,
+            "likedusers": [],
+            "dislikedusers": [],
+            "edited": false
         }
-        addAnswer(newRecord);
+        addAnswer(newAnswer);
+
+        const answerno = answers.filter(answer => answer.questionId.toString() === questionid.toString()).length+1;
+        editQuestion(questionid, { 
+            "answerno": answerno
+        })            
+
         navigateTo(-1);
 
     }

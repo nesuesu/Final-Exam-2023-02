@@ -19,13 +19,20 @@
 
 /* -------------QUESTIONS------------------------- */
 
-.questions {
+.question {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+/* -----------ANSWERS------------------ */
+
+.answers {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.question {
+.answer {
     border: 1px solid black;
     padding: 15px;
 }

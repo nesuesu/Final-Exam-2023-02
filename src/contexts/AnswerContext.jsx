@@ -14,14 +14,17 @@ const AnswerProvider = ({children}) => {
 
     const addAnswer = (newAnswer) => {
         setAnswers([...answers, newAnswer]);
+        postAnswer(newAnswer);
     }
 
     const deleteAnswer = (id) => {
         setAnswers(answers.filter(answer => answer.id.toString() !== id.toString()));
+        removeAnswer(id);
       }
 
     const editAnswer = (id, updatedAnswer) => {
         setAnswers(answers.map(answer => (answer.id.toString() === id.toString()) ? {...answer, ...updatedAnswer} : answer));
+        updateAnswer(id, updatedAnswer);
     }
 
     // CRUD FUNCTIONS
