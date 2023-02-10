@@ -141,6 +141,35 @@ const Questions = () => {
 
     return (
         <>
+        <form >
+
+        <label htmlFor="">Sort by: 
+            <select values={selected} onChange={handleChange} name="sort" id="">
+                <option value="date" >by date</option>
+                <option value="title" >by title</option>
+                <option value="likes" >by likes no</option>
+            </select>
+        </label>
+
+        <label htmlFor="">Order:
+            <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
+                <option value="asc">ascending</option>
+                <option value="desc">descending</option>
+            </select>
+        </label>
+
+        <label htmlFor="">Filter:
+            <select value={selectedFilter} onChange={handleChangeFilter} name="filter" id="">
+                <option value="allquestions">All Questions</option>
+                <option value="answered">Answered Questions</option>
+                <option value="unanswered">Unanswered Questions</option>
+            </select>
+        </label>
+
+        <input type="submit" value="Refresh"/>
+
+        </form>
+
         {/* <h1>Questions</h1> */}
         {loggedInUser && <button onClick={handleNewQuestion}>Add Your Question</button>}
         <div className="questions">        
