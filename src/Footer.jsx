@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <>
-        <footer>
+        <footer id="footer">
         <p>© 2023 nesuesu All rights reserved.</p>
         </footer>
         </>
