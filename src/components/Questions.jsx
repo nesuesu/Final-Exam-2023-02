@@ -3,14 +3,14 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import QuestionContext from "../contexts/QuestionContext";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Question from "./Question";
 
 const Questions = () => {
 
     const {questions, setQuestions} = useContext(QuestionContext);
-
+    
     const navigateTo = useNavigate();
 
     const handleNewQuestion = () => {
@@ -37,6 +37,8 @@ const Questions = () => {
                 case ('likes'):
                     sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
                     break;
+                default:
+                    break;
             }
         } else if (selectedOrder === 'desc') {
             switch (event.target.value) {
@@ -48,6 +50,8 @@ const Questions = () => {
                     break;
                 case ('likes'):
                     sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
+                    break;
+                default:
                     break;
             }
         }
@@ -73,6 +77,8 @@ const Questions = () => {
                 case ('desc'):
                     sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
                     break;
+                default:
+                    break;
             }
         };
         if (selected === 'title') {
@@ -82,6 +88,8 @@ const Questions = () => {
                     break;
                 case ('desc'):
                     sorter = (a, b) => a.title < b.title ? 1 : ( (a.title > b.title) ? -1 : 0 );
+                    break;
+                default:
                     break;
             }
         };
@@ -93,6 +101,8 @@ const Questions = () => {
                 case ('desc'):
                     sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
                     break;
+                default:
+                    break;
             }
         };
         const sorted = [...questions];
@@ -100,12 +110,29 @@ const Questions = () => {
         setQuestions(sorted);
     };
 
-        // const [selectedFilter, setSelectedFilter] = useState('all');
 
-        const handleOnSubmit = (e) => {
-            e.preventDefault();
+        const [selectedFilter, setSelectedFilter] = useState('allquestions');
+        
+        const handleChangeFilter = (e) => {
             console.log(e.target.value);
+            setSelectedFilter(e.target.value);
 
+            let sorted = [...questions];
+
+            switch (e.target.value) {
+                case ('allquestions'):
+                    sorted = questions;
+                    break;
+                case ('answered'):
+                    sorted = questions.filter(question => question.likesno > 25);
+                    break;
+                case ('unanswered'):
+                    sorted = questions.filter(question => question.likesno < 15);
+                    break;
+                default:
+                    break;
+            }
+            setQuestions(sorted);
         }
 
 
@@ -116,7 +143,6 @@ const Questions = () => {
 
             <label htmlFor="">Sort by: 
                 <select values={selected} onChange={handleChange} name="sort" id="">
-                {/* <select  onChange={(e) => setSortType(e.target.value)} name="sort" id=""> */}
                     <option value="date" >by date</option>
                     <option value="title" >by title</option>
                     <option value="likes" >by likes no</option>
@@ -129,19 +155,19 @@ const Questions = () => {
                     <option value="desc">descending</option>
                 </select>
             </label>
-        </form>
 
-
-        <form onSubmit={handleOnSubmit}>
             <label htmlFor="">Filter:
-                <select name="filter" id="">
-                    <option value="all">All Questions</option>
+                <select value={selectedFilter} onChange={handleChangeFilter} name="filter" id="">
+                    <option value="allquestions">All Questions</option>
                     <option value="answered">Answered Questions</option>
                     <option value="unanswered">Unanswered Questions</option>
                 </select>
             </label>
-            <input type="submit" />
+
+            <input type="submit" value="Refresh"/>
+
         </form>
+
 
         <h1>Questions</h1>
         {questions ?
