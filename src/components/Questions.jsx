@@ -62,6 +62,42 @@ const Questions = () => {
     const handleChangeOrder = event => {
         console.log(event.target.value);
         setSelectedOrder(event.target.value);
+
+        let sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
+
+        if (selected === 'date') {
+            switch (event.target.value) {
+                case ('asc'):
+                    sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
+                    break;
+                case ('desc'):
+                    sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
+                    break;
+            }
+        };
+        if (selected === 'title') {
+            switch (event.target.value) {
+                case ('asc'):
+                    sorter = (a, b) => a.title > b.title ? 1 : ( (a.title < b.title) ? -1 : 0 );
+                    break;
+                case ('desc'):
+                    sorter = (a, b) => a.title < b.title ? 1 : ( (a.title > b.title) ? -1 : 0 );
+                    break;
+            }
+        };
+        if (selected === 'likes') {
+            switch (event.target.value) {
+                case ('asc'):
+                    sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
+                    break;
+                case ('desc'):
+                    sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
+                    break;
+            }
+        };
+        const sorted = [...questions];
+        sorted.sort(sorter);
+        setQuestions(sorted);
     };
 
 
@@ -69,12 +105,6 @@ const Questions = () => {
         <>
         
         <form >
-            <label htmlFor="">Order:
-                <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
-                    <option value="asc">ascending</option>
-                    <option value="desc">descending</option>
-                </select>
-            </label>
 
             <label htmlFor="">Sort by: 
                 <select values={selected} onChange={handleChange} name="sort" id="">
@@ -84,6 +114,14 @@ const Questions = () => {
                     <option value="likes" >by likes no</option>
                 </select>
             </label>
+
+            <label htmlFor="">Order:
+                <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
+                    <option value="asc">ascending</option>
+                    <option value="desc">descending</option>
+                </select>
+            </label>
+            
         </form>
 
         <h1>Questions</h1>
