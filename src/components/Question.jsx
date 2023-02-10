@@ -72,6 +72,7 @@ const Question = ({question, index}) => {
             <h3>{index+1}) {question.question}</h3>
             <p>Title: {question.title}</p>
             <p>question id: {question.id} user id: {question.userId}</p>
+            <p>number of answers: {question.answerno}</p>
             <p style={{color:'red'}}>likes: {question.likedusers.length} dislikes: {question.dislikedusers.length} </p>
             <p style={{color:'blue'}}>edited: {question.edited ? 'yes' : 'no'}</p>
             <p>Date : { new Date(question.id).toLocaleDateString('LT')} {new Date(question.id).toLocaleTimeString('LT')}</p>

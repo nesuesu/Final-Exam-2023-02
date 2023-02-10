@@ -40,6 +40,9 @@ const Questions = () => {
                 case ('likes'):
                     sorter = (a, b) => a.likesno > b.likesno ? 1 : ( (a.likesno < b.likesno) ? -1 : 0 );
                     break;
+                case ('answer'):
+                    sorter = (a, b) => a.answerno > b.answerno ? 1 : ( (a.answerno < b.answerno) ? -1 : 0 );
+                    break;
                 default:
                     break;
             }
@@ -53,6 +56,9 @@ const Questions = () => {
                     break;
                 case ('likes'):
                     sorter = (a, b) => a.likesno < b.likesno ? 1 : ( (a.likesno > b.likesno) ? -1 : 0 );
+                    break;
+                case ('answers'):
+                    sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
                     break;
                 default:
                     break;
@@ -108,6 +114,18 @@ const Questions = () => {
                     break;
             }
         };
+        if (selected === 'answers') {
+            switch (event.target.value) {
+                case ('asc'):
+                    sorter = (a, b) => a.answerno > b.answerno ? 1 : ( (a.answerno < b.answerno) ? -1 : 0 );
+                    break;
+                case ('desc'):
+                    sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
+                    break;
+                default:
+                    break;
+            }
+        };
         const sorted = [...questions];
         sorted.sort(sorter);
         setQuestions(sorted);
@@ -127,10 +145,10 @@ const Questions = () => {
                     sorted = questions;
                     break;
                 case ('answered'):
-                    sorted = questions.filter(question => question.likesno > 25);
+                    sorted = questions.filter(question => question.answerno > 0);
                     break;
                 case ('unanswered'):
-                    sorted = questions.filter(question => question.likesno < 15);
+                    sorted = questions.filter(question => question.answerno === 0);
                     break;
                 default:
                     break;
@@ -148,6 +166,7 @@ const Questions = () => {
                 <option value="date" >by date</option>
                 <option value="title" >by title</option>
                 <option value="likes" >by likes no</option>
+                <option value="answers" >by answers no</option>
             </select>
         </label>
 

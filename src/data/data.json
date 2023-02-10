@@ -28,12 +28,12 @@
       "title": "Animals",
       "question": "What animals turn white in winter?",
       "userId": 1,
-      "likedusers": [
+      "likedusers": [],
+      "dislikedusers": [
         1
       ],
-      "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
+      "answerno": 5,
       "likesno": 5
     },
     {
@@ -130,6 +130,18 @@
       "edited": 1675952452948,
       "answerno": 0,
       "likesno": 32
+    },
+    {
+      "id": 1676041840230,
+      "title": "Pirmas klausimas",
+      "question": "Klausimas?",
+      "userId": 1,
+      "likedusers": [
+        1
+      ],
+      "dislikedusers": [],
+      "edited": 1676041902789,
+      "answerno": 1
     }
   ],
   "answers": [
@@ -249,6 +261,24 @@
       "questionId": "2",
       "answer": "I don't know",
       "userId": 2,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676041663696,
+      "questionId": "1",
+      "answer": "penktas klausimas",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676041861493,
+      "questionId": "1676041840230",
+      "answer": "pirmas atsakymas",
+      "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
