@@ -1,49 +1,149 @@
 import { useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import UserContext from "../contexts/UserContext";
+
+import { useNavigate } from "react-router-dom";
+
+import * as Yup from 'yup';
+import {useFormik} from 'formik';
 
 const Register = () => {
 
-    const { users, setUsers, setLoggedInUser } = useContext(UserContext);
+    const { users, setUsers, postUser, setLoggedInUser } = useContext(UserContext);
 
     const navigateTo = useNavigate();
 
+    const validationSchema = Yup.object({
+        username: Yup
+            .string('Must be a string')
+            .required('Username is required'),
+        password: Yup
+            .string('Must be a string')
+            .required('Password is required')
+            .min(3, 'Please enter at least 3 symbols'),
+        passwordRepeat: Yup
+            .string('Must be a string')
+            .required('Confirm password is required')
+            .min(3, 'Please enter at least 3 symbols')
+            .oneOf([Yup.ref('password'), null], 'Passwords must match.'),
+        email: Yup
+            .string('Must be a string')
+            .required('Email is required')
+            .email('Please enter a valid email address'),
+        avatar: Yup
+            .string('Must be a string')
+            .url('Please enter valid url'),
+    });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const [username, password, passwordRepeat] = [e.target.username.value, e.target.password.value, e.target.passwordRepeat.value];
-
-        const founduser = users.find(user => (user.username === username));
-        if (founduser) {
-            alert('such username exists');
-        } else if (password !== passwordRepeat) {
-            alert('passwords must match');
-        } else {
-            const newUser = {
-                username: username,
-                password: password,
+    const formik = useFormik({
+        initialValues: {
+            username:'',
+            password: '',
+            passwordRepeat: '',
+            email: '',
+            avatar:'',
+            id:Date.now(),
+        },
+        validationSchema,
+        validateOnChange:true,
+        validateOnBlur:true,
+        onSubmit: (values,actions) => {
+            const {passwordRepeat, ...rest} = values;
+            const data = rest;
+            if (users.findIndex(user => user.username === values.username) === -1) {
+                setUsers([...users, data]);
+                // postUser(data);
+                setLoggedInUser(data);
+                sessionStorage.setItem('loggedInUser', data.username);
+                navigateTo('/questions');
+            } else {
+                alert('The username you have entered exists');
             }
-            setUsers([...users, newUser]);
-            setLoggedInUser(newUser);
-            navigateTo('/questions');
-        }
-    }
+
+          },
+    });
 
         return (
             <>
                 <h1>Sign up</h1>
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="">Username:
-                        <input type="text" name="username" />
+                <form onSubmit={formik.handleSubmit}>
+                    <label >Username:
+                        <input 
+                            type="text" 
+                            name="username"
+                            id="username"
+                            value={formik.values.username}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur} 
+                        />
                     </label>
-                    <label htmlFor="">Password:
-                        <input type="password" name="password" />
+                    {formik.touched.username && formik.errors.username ? (
+                        <span className="error">{formik.errors.username}</span>) 
+                        : 
+                        null}
+
+                    <label >Password:
+                        <input 
+                            type="password" 
+                            name="password"
+                            id="password"
+                            value={formik.values.password}
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                        />
                     </label>
-                    <label htmlFor="">Confirm password:
-                        <input type="password" name="passwordRepeat" />
+                    {formik.touched.password && formik.errors.password ? (
+                        <span className="error">{formik.errors.password}</span>) 
+                        : 
+                        null}
+
+                    <label >Confirm password:
+                        <input 
+                            type="password" 
+                            name="passwordRepeat"
+                            id="passwordRepeat"
+                            value={formik.values.passwordRepeat}
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                        />
                     </label>
-                    <input type="submit" value="Log in" />
+                    {formik.touched.passwordRepeat && formik.errors.passwordRepeat ? (
+                        <span className="error">{formik.errors.passwordRepeat}</span>) 
+                        : 
+                        null}
+
+                    <label >Email:
+                        <input 
+                            type="text" 
+                            name="email"
+                            id="email"
+                            value={formik.values.email}
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                        />
+                    </label>
+                    {formik.touched.email && formik.errors.email ? (
+                        <span className="error">{formik.errors.email}</span>) 
+                        : 
+                        null}
+
+                    <label >Avatar:
+                        <input 
+                            type="text" 
+                            name="avatar"
+                            id="avatar"
+                            value={formik.values.avatar}
+                            onChange={formik.handleChange} 
+                            onBlur={formik.handleBlur}
+                        />
+                    </label>
+                    {formik.touched.avatar && formik.errors.avatar ? (
+                        <span className="error">{formik.errors.avatar}</span>) 
+                        : 
+                        null}
+
+
+                    {/* <input type="submit" value="Sign up" /> */}
+                    <button type="submit">Submit</button>
                 </form>
             </>
         );
