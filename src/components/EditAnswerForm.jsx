@@ -29,19 +29,22 @@ const EditAnswerForm = () => {
 
     return (
         <>
-        <h1>Edit Your Answer</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="answer">Edit Answer:
-                <textarea 
-                    name="answer" 
-                    id="answer" 
-                    cols="30" rows="10" 
-                    value={inputAnswer}
-                    onChange={(e) => setInputAnswer(e.target.value)}>
-                </textarea>
-            </label>
-            <input type="submit" value="Submit"/>  
-        </form>
+        <div className="forma">
+            <h1>Edit Your Answer</h1>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="answer">
+                    <textarea 
+                        name="answer" 
+                        id="answer" 
+                        cols="30" rows="10" 
+                        value={inputAnswer}
+                        onChange={(e) => setInputAnswer(e.target.value)}>
+                    </textarea>
+                </label>
+                {/* <input type="submit" value="Submit"/>   */}
+                <button type="submit">Edit Answer</button>
+            </form>
+        </div>
         </>
     );
 }

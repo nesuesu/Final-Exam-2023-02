@@ -19,7 +19,7 @@ const Header = () => {
         <div className='flex'>
 
             <div className='logo'>
-                <img src={logo} alt="logo" />
+                <Link to={'/questions'}><img src={logo} alt="logo" /></Link>
             </div>
 
             <div className='menu'>

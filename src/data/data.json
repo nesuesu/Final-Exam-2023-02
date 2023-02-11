@@ -44,7 +44,7 @@
     },
     {
       "username": "fff",
-      "password": "sss",
+      "password": "fff",
       "email": "a@a.a",
       "avatar": "https://w7.pngwing.com/pngs/555/703/png-transparent-computer-icons-avatar-woman-user-avatar-face-heroes-service-thumbnail.png",
       "id": 1676142433527
@@ -58,11 +58,12 @@
       "userId": 1,
       "likedusers": [
         1,
-        1676131123041
+        1676131123041,
+        1676142433527
       ],
       "dislikedusers": [],
       "edited": 1676066209780,
-      "answerno": 6
+      "answerno": 7
     },
     {
       "id": 2,
@@ -72,7 +73,8 @@
       "likedusers": [
         1,
         2,
-        1676131123041
+        1676131123041,
+        1676142433527
       ],
       "dislikedusers": [],
       "edited": false,
@@ -83,7 +85,9 @@
       "title": "Insects",
       "question": "Can insects hear with their feet?",
       "userId": 2,
-      "likedusers": [],
+      "likedusers": [
+        1676142433527
+      ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 1
@@ -93,7 +97,9 @@
       "title": "Insects",
       "question": "Why don't spiders get caught in their web?",
       "userId": 3,
-      "likedusers": [],
+      "likedusers": [
+        1676142433527
+      ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 2
@@ -103,7 +109,9 @@
       "title": "Reptiles",
       "question": "How to distinguish a viper from a snake?",
       "userId": 1,
-      "likedusers": [],
+      "likedusers": [
+        1676142433527
+      ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 1
@@ -152,7 +160,8 @@
       "question": "Kaip Tau sekasi???",
       "userId": 1,
       "likedusers": [
-        1
+        1,
+        1676142433527
       ],
       "dislikedusers": [
         2
@@ -168,7 +177,8 @@
       "likedusers": [
         1,
         2,
-        3
+        3,
+        1676142433527
       ],
       "dislikedusers": [],
       "edited": 1676041902789,
@@ -179,10 +189,10 @@
       "title": "Klausimas",
       "question": "Pirmas mano klausimas",
       "userId": 3,
-      "likedusers": [
+      "likedusers": [],
+      "dislikedusers": [
         1676142433527
       ],
-      "dislikedusers": [],
       "edited": false,
       "answerno": 0
     },
@@ -191,6 +201,18 @@
       "title": "dar vienas",
       "question": "mano klausimas",
       "userId": 1676142433527,
+      "likedusers": [],
+      "dislikedusers": [
+        1676142433527
+      ],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 1676145646628,
+      "title": "klausimas",
+      "question": "trecias neatsakytas klausimas",
+      "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
@@ -360,6 +382,17 @@
       ],
       "dislikedusers": [],
       "edited": false
+    },
+    {
+      "id": 1676145310036,
+      "questionId": "1",
+      "answer": "My answer edited",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [
+        1
+      ],
+      "edited": 1676145514460
     }
   ]
 }
