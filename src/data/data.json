@@ -26,15 +26,14 @@
     {
       "id": 1,
       "title": "Animals",
-      "question": "What animals turn white in winter?",
+      "question": "What animals turn white in winter???",
       "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [
+      "likedusers": [
         1
       ],
-      "edited": false,
-      "answerno": 5,
-      "likesno": 5
+      "dislikedusers": [],
+      "edited": 1676066209780,
+      "answerno": 6
     },
     {
       "id": 2,
@@ -47,8 +46,7 @@
       ],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
-      "likesno": 15
+      "answerno": 1
     },
     {
       "id": 3,
@@ -58,8 +56,7 @@
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
-      "likesno": 3
+      "answerno": 1
     },
     {
       "id": 4,
@@ -69,8 +66,7 @@
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
-      "likesno": 21
+      "answerno": 1
     },
     {
       "id": 5,
@@ -80,8 +76,7 @@
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
-      "likesno": 7
+      "answerno": 1
     },
     {
       "id": 6,
@@ -91,8 +86,7 @@
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1,
-      "likesno": 2
+      "answerno": 1
     },
     {
       "id": 7,
@@ -102,7 +96,6 @@
       "likedusers": [],
       "dislikedusers": [],
       "answerno": 1,
-      "likesno": 50,
       "edited": "false"
     },
     {
@@ -131,8 +124,7 @@
         2
       ],
       "edited": 1675952452948,
-      "answerno": 0,
-      "likesno": 32
+      "answerno": 1
     },
     {
       "id": 1676041840230,
@@ -140,11 +132,23 @@
       "question": "Klausimas?",
       "userId": 1,
       "likedusers": [
-        1
+        1,
+        2,
+        3
       ],
       "dislikedusers": [],
       "edited": 1676041902789,
       "answerno": 1
+    },
+    {
+      "id": 1676045217759,
+      "title": "Klausimas",
+      "question": "Pirmas mano klausimas",
+      "userId": 3,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
     }
   ],
   "answers": [
@@ -153,7 +157,9 @@
       "questionId": 1,
       "answer": "Everyone knows that the hare turns white in winter. That's what they call him - a white hare. But he must not be this way by winter. The fur of the fox, ermine and weasel becomes white. Partridge turns white among the birds. But the polar bear and polar owl are white all year round.",
       "userId": 2,
-      "likedusers": [],
+      "likedusers": [
+        2
+      ],
       "dislikedusers": [
         1
       ],
@@ -182,7 +188,6 @@
       "questionId": 4,
       "answer": "Spiders make two kinds of webs. Some are sticky, into which various insects fall. Others are not sticky. Spiders move along them. It happens that a spider gets into a sticky cobweb, but gets out of it thanks to the fatty coating on its body.",
       "userId": 2,
-      "likesno": 0,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
@@ -192,7 +197,6 @@
       "questionId": 5,
       "answer": "The pupil of a snake is round, while that of a viper is like a slit and is located vertically. These snakes differ in color. On the back of the viper, a zigzag pattern is clearly visible. Although there are one-colored vipers. But their main difference is that there are bright yellow spots on the sides of the snake's head, while the viper does not have them.",
       "userId": 3,
-      "likesno": 0,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
@@ -202,7 +206,6 @@
       "questionId": 6,
       "answer": "It may seem strange, but the weight of a large shark is many times greater than the weight of a large elephant. An elephant weighs only 6 tons. But big whale sharks come across weighing up to 30 tons!",
       "userId": 3,
-      "likesno": 0,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
@@ -212,7 +215,6 @@
       "questionId": 7,
       "answer": "One of the birds, although it does not incubate eggs, still cares about the temperature in the incubator nest. They measure the temperature... What do you think? Beak! These amazing birds are called Australian weed chickens.",
       "userId": 1,
-      "likesno": 0,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
@@ -222,7 +224,6 @@
       "questionId": 8,
       "answer": "Many scholars debate this issue. The most intelligent include several animals. This is a killer whale and many species of dolphins. Elephants and pigs are also considered very smart. Yet the most intelligent are primates (chimpanzees, gorillas, orangutans, baboons, gibbons and monkeys). They have a large, complex brain, can communicate with each other, and they have developed certain language skills, they know how to learn some actions and use objects as tools (for example, dig the ground with a stick or knock fruit from trees with it).",
       "userId": 2,
-      "likesno": 0,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
@@ -255,7 +256,9 @@
       "questionId": "1",
       "answer": "ketvirtas",
       "userId": 3,
-      "likedusers": [],
+      "likedusers": [
+        1
+      ],
       "dislikedusers": [],
       "edited": false
     },
@@ -273,7 +276,10 @@
       "questionId": "1",
       "answer": "penktas klausimas",
       "userId": 1,
-      "likedusers": [],
+      "likedusers": [
+        1,
+        2
+      ],
       "dislikedusers": [],
       "edited": false
     },
@@ -283,6 +289,17 @@
       "answer": "pirmas atsakymas",
       "userId": 1,
       "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676044588084,
+      "questionId": "1675952295028",
+      "answer": "Pabandom iš naujo",
+      "userId": 3,
+      "likedusers": [
+        3
+      ],
       "dislikedusers": [],
       "edited": false
     }

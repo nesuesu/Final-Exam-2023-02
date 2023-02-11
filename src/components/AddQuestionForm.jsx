@@ -16,18 +16,20 @@ const AddQuestionForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newRecord = {
-            "id":Date.now(),
-            "title":e.target.title.value,
-            "question":e.target.question.value,
-            "userId": loggedInUser.id,
-            "likedusers": [],
-            "dislikedusers": [],
-            "edited": false,
-            "answerno": 0,
+        if (e.target.question.value !== '' || e.target.title.value !== '' ) {
+            const newRecord = {
+                "id":Date.now(),
+                "title":e.target.title.value,
+                "question":e.target.question.value,
+                "userId": loggedInUser.id,
+                "likedusers": [],
+                "dislikedusers": [],
+                "edited": false,
+                "answerno": 0,
+            }
+            addQuestion(newRecord);
         }
-
-        addQuestion(newRecord);
+        
         navigateTo('/questions');
 
     }

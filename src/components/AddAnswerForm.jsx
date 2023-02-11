@@ -22,21 +22,23 @@ const AddAnswerForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const newAnswer = {
-            "id":Date.now(),
-            "questionId":questionid,
-            "answer":e.target.answer.value,
-            "userId": loggedInUser.id,
-            "likedusers": [],
-            "dislikedusers": [],
-            "edited": false
-        }
-        addAnswer(newAnswer);
+        if (e.target.answer.value !== '' ) {
+            const newAnswer = {
+                "id":Date.now(),
+                "questionId":questionid,
+                "answer":e.target.answer.value,
+                "userId": loggedInUser.id,
+                "likedusers": [],
+                "dislikedusers": [],
+                "edited": false
+            }
+            addAnswer(newAnswer);
 
-        const answerno = answers.filter(answer => answer.questionId.toString() === questionid.toString()).length+1;
-        editQuestion(questionid, { 
-            "answerno": answerno
-        })            
+            const answerno = answers.filter(answer => answer.questionId.toString() === questionid.toString()).length+1;
+            editQuestion(questionid, { 
+                "answerno": answerno
+            })
+        }            
 
         navigateTo(-1);
 

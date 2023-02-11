@@ -16,30 +16,31 @@ const Header = () => {
         <>
         <header>
 
-        <div className='logo'>
-            <img src={logo} alt="logo" />
-        </div>
+        <div className='flex'>
 
-        <div className='menu'>
-            <Link to={'/questions'}>Questions</Link>
-            {/* <Link to={'/addquestion'}>Add question</Link>
-            <Link to={'/answers'}>Answers</Link>
-            <Link to={'/addanswer'}>Add Answer</Link> */}
-        </div>
-        
-        {loggedInUser ?
-            <UserInfo/>
-        :
-        <div className='login'>
-            <Link to={'/login'}>Login</Link>
-            <Link to={'/register'}>Signup</Link>
-        </div>
-        }
+            <div className='logo'>
+                <img src={logo} alt="logo" />
+            </div>
 
+            <div className='menu'>
+                <Link to={'/questions'}>Questions</Link>
+                {/* <Link to={'/addquestion'}>Add question</Link>
+                <Link to={'/answers'}>Answers</Link>
+                <Link to={'/addanswer'}>Add Answer</Link> */}
+            </div>
+            
+            {loggedInUser ?
+                <UserInfo/>
+            :
+            <div className='login'>
+                <Link to={'/login'}>Login</Link>
+                <Link to={'/register'}>Signup</Link>
+            </div>
+            }
+
+        </div>
 
         </header>
-
-        <h1>Logged in: {loggedInUser && loggedInUser.username}</h1>
         </>
     );
 }
