@@ -20,6 +20,34 @@
       "email": "three@ccc.com",
       "password": "789",
       "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+    },
+    {
+      "username": "admin",
+      "password": "admin",
+      "email": "a@a.a",
+      "avatar": "https://us.123rf.com/450wm/anatolir/anatolir2011/anatolir201105528/anatolir201105528.jpg",
+      "id": 1676133872245
+    },
+    {
+      "username": "a",
+      "password": "aaa",
+      "email": "a@a.a",
+      "avatar": "https://cdn4.iconfinder.com/data/icons/essential-app-2/16/user-avatar-human-admin-login-512.png",
+      "id": 1676134169558
+    },
+    {
+      "username": "sss",
+      "password": "sss",
+      "email": "a@a.a",
+      "avatar": "",
+      "id": 1676140584621
+    },
+    {
+      "username": "fff",
+      "password": "sss",
+      "email": "a@a.a",
+      "avatar": "https://w7.pngwing.com/pngs/555/703/png-transparent-computer-icons-avatar-woman-user-avatar-face-heroes-service-thumbnail.png",
+      "id": 1676142433527
     }
   ],
   "questions": [
@@ -29,7 +57,8 @@
       "question": "What animals turn white in winter???",
       "userId": 1,
       "likedusers": [
-        1
+        1,
+        1676131123041
       ],
       "dislikedusers": [],
       "edited": 1676066209780,
@@ -42,7 +71,8 @@
       "userId": 1,
       "likedusers": [
         1,
-        2
+        2,
+        1676131123041
       ],
       "dislikedusers": [],
       "edited": false,
@@ -66,7 +96,7 @@
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1
+      "answerno": 2
     },
     {
       "id": 5,
@@ -83,7 +113,9 @@
       "title": "Fish",
       "question": "Who is heavier - an elephant or a big shark?",
       "userId": 2,
-      "likedusers": [],
+      "likedusers": [
+        1676142433527
+      ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 1
@@ -106,11 +138,13 @@
       "likedusers": [
         1,
         3,
-        2
+        2,
+        1676131123041,
+        1676142433527
       ],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 1
+      "answerno": 3
     },
     {
       "id": 1675952295028,
@@ -145,6 +179,18 @@
       "title": "Klausimas",
       "question": "Pirmas mano klausimas",
       "userId": 3,
+      "likedusers": [
+        1676142433527
+      ],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 1676142950468,
+      "title": "dar vienas",
+      "question": "mano klausimas",
+      "userId": 1676142433527,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false,
@@ -158,11 +204,10 @@
       "answer": "Everyone knows that the hare turns white in winter. That's what they call him - a white hare. But he must not be this way by winter. The fur of the fox, ermine and weasel becomes white. Partridge turns white among the birds. But the polar bear and polar owl are white all year round.",
       "userId": 2,
       "likedusers": [
-        2
-      ],
-      "dislikedusers": [
+        2,
         1
       ],
+      "dislikedusers": [],
       "edited": false
     },
     {
@@ -224,7 +269,9 @@
       "questionId": 8,
       "answer": "Many scholars debate this issue. The most intelligent include several animals. This is a killer whale and many species of dolphins. Elephants and pigs are also considered very smart. Yet the most intelligent are primates (chimpanzees, gorillas, orangutans, baboons, gibbons and monkeys). They have a large, complex brain, can communicate with each other, and they have developed certain language skills, they know how to learn some actions and use objects as tools (for example, dig the ground with a stick or knock fruit from trees with it).",
       "userId": 2,
-      "likedusers": [],
+      "likedusers": [
+        1676131123041
+      ],
       "dislikedusers": [],
       "edited": false
     },
@@ -299,6 +346,17 @@
       "userId": 3,
       "likedusers": [
         3
+      ],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676138234922,
+      "questionId": "1",
+      "answer": "3fo 904u049u oef2h42",
+      "userId": 1,
+      "likedusers": [
+        1
       ],
       "dislikedusers": [],
       "edited": false

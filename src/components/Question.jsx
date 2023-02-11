@@ -68,15 +68,19 @@ const Question = ({question, index}) => {
 
     return (
         <>
-        <div className="question">
-            <h3>{index+1}) {question.question}</h3>
-            <p>Title: {question.title}</p>
-            <p>question id: {question.id} user id: {question.userId}</p>
-            <p>number of answers: {question.answerno}</p>
-            <p style={{color:'red'}}>likes: {question.likedusers.length} dislikes: {question.dislikedusers.length} </p>
-            <p style={{color:'blue'}}>edited: {question.edited ? 'yes' : 'no'}</p>
+        <div className="post">
+            <h3 style={{color:'blue'}}>{index+1}) {question.question}</h3>
+            <p style={{fontStyle: 'italic', color:'blue'}}>Title: {question.title}</p>
+            <div className="info">
+                <p>question id: {question.id} user id: {question.userId}</p>
+                <p>number of answers: {question.answerno}</p>
+                <p style={{color:'red'}}>likes: {question.likedusers.length} dislikes: {question.dislikedusers.length} </p>
+                <p style={{color:'blue'}}>edited: {question.edited ? 'yes' : 'no'}</p>
+            </div>
             <p>Date : { new Date(question.id).toLocaleDateString('LT')} {new Date(question.id).toLocaleTimeString('LT')}</p>
+            <br />
             <button onClick={handleAnswers}>Show Answers to the Question</button>
+            
             { (loggedInUser && question.userId.toString() === loggedInUser.id.toString()) && 
                 <div>
                     <button onClick={handleEdit}>Edit the Question</button>

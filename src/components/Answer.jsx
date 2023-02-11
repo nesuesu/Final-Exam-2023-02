@@ -66,14 +66,16 @@ const Answer = ({answer,index}) => {
 
     return (
         <>
-        <div className="answer">
+        <div className="post">
             {/* <h3>question : {questions.find(question => question.id.toString() === answer.questionId.toString()).question}</h3> */}
-            <h3>{index+1}) {answer.answer}</h3>
-
-            <p>answer id: {answer.id} question id: {answer.questionId} user id: {answer.userId}</p>
-            <p style={{color:'red'}}>likes: {answer.likedusers.length} dislikes: {answer.dislikedusers.length} </p>
-            <p style={{color:'blue'}}>edited: {answer.edited ? 'yes' : 'no'}</p>
+            <h3 style={{color:'black'}}>{index+1}) {answer.answer}</h3>
+            <div className="info">
+                <p>answer id: {answer.id} question id: {answer.questionId} user id: {answer.userId}</p>
+                <p style={{color:'red'}}>likes: {answer.likedusers.length} dislikes: {answer.dislikedusers.length} </p>
+                <p style={{color:'blue'}}>edited: {answer.edited ? 'yes' : 'no'}</p>
+            </div>
             <p>Date : { new Date(answer.id).toLocaleDateString('LT')} {new Date(answer.id).toLocaleTimeString('LT')}</p>
+            <br />
 
             { (loggedInUser && answer.userId.toString() === loggedInUser.id.toString()) && 
             <div>

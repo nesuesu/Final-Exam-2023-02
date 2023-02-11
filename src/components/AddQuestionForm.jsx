@@ -36,16 +36,19 @@ const AddQuestionForm = () => {
 
     return (
         <>
-        <h1>Add Question</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="">Title:
-                <input type="text" name="title"/>
-            </label>
-            <label htmlFor="question">Your Question:
-                <textarea name="question" id="question" cols="30" rows="10"></textarea>
-            </label>
-            <input type="submit" value="Submit"/>  
-        </form>
+        <div className="forma">
+            <h1>Add Your Question</h1>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="">Title:
+                    <input type="text" name="title" placeholder="Type your title here..."/>
+                </label>
+                <label htmlFor="question">Question:
+                    <textarea name="question" id="question" cols="30" rows="10" placeholder="Type your question here..."></textarea>
+                </label>
+                {/* <input type="submit" value="Submit"/>   */}
+                <button type="submit">Add Question</button>
+            </form>
+        </div>
         </>
     );
 }

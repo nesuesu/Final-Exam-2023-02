@@ -34,7 +34,7 @@ const Login = () => {
             const logged = users.find(user => (user.username === values.username) && (user.password === values.password));
             if (logged) {   
                 setLoggedInUser(logged);
-                sessionStorage.setItem('loggedInUser', values.username); 
+                sessionStorage.setItem('loggedInUser', JSON.stringify(logged)); 
                 navigateTo('/questions');
             } else {
                 alert('Wrong username or password')
@@ -45,41 +45,45 @@ const Login = () => {
 
     return (
         <>
-        <h1>Log in</h1>
-        <form onSubmit={formik.handleSubmit}>
+        <div className="forma">
+            <h1>Log in</h1>
+            <form onSubmit={formik.handleSubmit}>
 
-            <label>Username: 
-                <input 
-                    type="text" 
-                    name="username" 
-                    placeholder="Enter your username"
-                    value={formik.values.username}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                />
-            </label>
-            {formik.touched.username && formik.errors.username ? (
-                <span className="error">{formik.errors.username}</span>) 
-                : 
-                null}
+                <label>Username: 
+                    <input 
+                        type="text" 
+                        name="username" 
+                        placeholder="Enter your username"
+                        value={formik.values.username}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                    />
+                </label>
+                {formik.touched.username && formik.errors.username ? (
+                    <p className="error">{formik.errors.username}</p>) 
+                    : 
+                    null}
 
-            <label>Password: 
-                <input 
-                    type="password" 
-                    name="password"
-                    placeholder="Enter your password"
-                    value={formik.values.password}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                />
-            </label>
-            {formik.touched.password && formik.errors.password ? (
-                <span className="error">{formik.errors.password}</span>) 
-                : 
-                null}
-            
-            <input type="submit" value="Log in" />
-        </form>
+                <label>Password: 
+                    <input 
+                        type="password" 
+                        name="password"
+                        placeholder="Enter your password"
+                        value={formik.values.password}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                    />
+                </label>
+                {formik.touched.password && formik.errors.password ? (
+                    <p className="error">{formik.errors.password}</p>) 
+                    : 
+                    null}
+                
+                {/* <input type="submit" value="Log In"/>  */}
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+        
         </>
     );
 }

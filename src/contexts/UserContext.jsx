@@ -11,12 +11,16 @@ const UserProvider = ({children}) => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-    const [loggedInUser, setLoggedInUser] = useState(null);
+    // const [loggedInUser, setLoggedInUser] = useState();
+    // loggedInUser - kreipiamės į sessionStorage ir į state kintamąjį loggedInUser įrašome username duomenis iš users arba undefined (jeigu nerandame)
+    const [loggedInUser, setLoggedInUser] = useState(sessionStorage.getItem('loggedInUser') ? JSON.parse(sessionStorage.getItem('loggedInUser')) : null);
+
 
     // STATE FUNCTIONS
 
     const addUser = (newUser) => {
         setUsers([...users, newUser]);
+        // postUser(newUser); ????????????????????????
     }
 
     // CRUD FUNCTIONS

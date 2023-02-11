@@ -46,13 +46,16 @@ const AddAnswerForm = () => {
 
     return (
         <>
-        <h1>Add Answer</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="answer">Your Answer:
-                <textarea name="answer" id="answer" cols="30" rows="10"></textarea>
-            </label>
-            <input type="submit" value="Submit"/>  
-        </form>
+        <div className="forma">
+            <h1>Add Your Answer</h1>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="answer">
+                    <textarea name="answer" id="answer" cols="30" rows="10" placeholder="Type your answer here..."></textarea>
+                </label>
+                {/* <input type="submit" value="Submit"/>   */}
+                <button type="submit">Add Answer</button>
+            </form>
+        </div>
         </>
     );
 }

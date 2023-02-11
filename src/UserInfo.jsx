@@ -7,11 +7,12 @@ const UserInfo = () => {
 
     const logOut = () => {
         setLoggedInUser(null);
+        sessionStorage.clear();
     }
 
     return (
         <div className="userinfo">
-            <img style={{height:'30px'}} src={loggedInUser.avatar} alt="avatar" />
+            <img style={{height:'50px'}} src={loggedInUser.avatar} alt="avatar" />
             <p>{loggedInUser.username}</p>
             <button onClick={logOut}>Log Out</button>
         </div>

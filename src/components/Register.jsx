@@ -51,9 +51,9 @@ const Register = () => {
             const data = rest;
             if (users.findIndex(user => user.username === values.username) === -1) {
                 setUsers([...users, data]);
-                // postUser(data);
+                postUser(data); // !!!!!!!!!!!!!!!!!!!!
                 setLoggedInUser(data);
-                sessionStorage.setItem('loggedInUser', data.username);
+                sessionStorage.setItem('dataInUser', JSON.stringify(data)); 
                 navigateTo('/questions');
             } else {
                 alert('The username you have entered exists');
@@ -64,6 +64,7 @@ const Register = () => {
 
         return (
             <>
+            <div className="forma">
                 <h1>Sign up</h1>
                 <form onSubmit={formik.handleSubmit}>
                     <label >Username:
@@ -77,7 +78,7 @@ const Register = () => {
                         />
                     </label>
                     {formik.touched.username && formik.errors.username ? (
-                        <span className="error">{formik.errors.username}</span>) 
+                        <p className="error">{formik.errors.username}</p>) 
                         : 
                         null}
 
@@ -92,7 +93,7 @@ const Register = () => {
                         />
                     </label>
                     {formik.touched.password && formik.errors.password ? (
-                        <span className="error">{formik.errors.password}</span>) 
+                        <p className="error">{formik.errors.password}</p>) 
                         : 
                         null}
 
@@ -107,7 +108,7 @@ const Register = () => {
                         />
                     </label>
                     {formik.touched.passwordRepeat && formik.errors.passwordRepeat ? (
-                        <span className="error">{formik.errors.passwordRepeat}</span>) 
+                        <p className="error">{formik.errors.passwordRepeat}</p>) 
                         : 
                         null}
 
@@ -122,7 +123,7 @@ const Register = () => {
                         />
                     </label>
                     {formik.touched.email && formik.errors.email ? (
-                        <span className="error">{formik.errors.email}</span>) 
+                        <p className="error">{formik.errors.email}</p>) 
                         : 
                         null}
 
@@ -137,14 +138,15 @@ const Register = () => {
                         />
                     </label>
                     {formik.touched.avatar && formik.errors.avatar ? (
-                        <span className="error">{formik.errors.avatar}</span>) 
+                        <p className="error">{formik.errors.avatar}</p>) 
                         : 
                         null}
 
 
-                    {/* <input type="submit" value="Sign up" /> */}
-                    <button type="submit">Submit</button>
+                    {/* <input type="submit" value="Sign Up" /> */}
+                    <button type="submit">Sign Up</button>
                 </form>
+            </div>
             </>
         );
     }

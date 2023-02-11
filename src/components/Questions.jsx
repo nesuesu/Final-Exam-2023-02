@@ -143,6 +143,7 @@ const Questions = () => {
             switch (e.target.value) {
                 case ('allquestions'):
                     sorted = questions;
+                    window.location.reload();
                     break;
                 case ('answered'):
                     sorted = questions.filter(question => question.answerno > 0);
@@ -159,24 +160,23 @@ const Questions = () => {
 
     return (
         <>
-        <form >
+        {loggedInUser && <button className="add" onClick={handleNewQuestion} style={{color:'red'}}>ADD YOUR QUESTION</button>}
 
+        <form className="filters">
         <label htmlFor="">Sort by: 
             <select values={selected} onChange={handleChange} name="sort" id="">
-                <option value="date" >by date</option>
-                <option value="title" >by title</option>
-                <option value="likes" >by likes no</option>
-                <option value="answers" >by answers no</option>
+                <option value="date" >date</option>
+                <option value="title" >title</option>
+                <option value="likes" >likes</option>
+                <option value="answers" >answers</option>
             </select>
         </label>
-
         <label htmlFor="">Order:
             <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
                 <option value="asc">ascending</option>
                 <option value="desc">descending</option>
             </select>
         </label>
-
         <label htmlFor="">Filter:
             <select value={selectedFilter} onChange={handleChangeFilter} name="filter" id="">
                 <option value="allquestions">All Questions</option>
@@ -184,14 +184,10 @@ const Questions = () => {
                 <option value="unanswered">Unanswered Questions</option>
             </select>
         </label>
-
-        <input type="submit" value="Refresh"/>
-
+        {/* <input type="submit" value="Refresh"/> */}
         </form>
 
-        {/* <h1>Questions</h1> */}
-        {loggedInUser && <button onClick={handleNewQuestion}>Add Your Question</button>}
-        <div className="questions">        
+        <div className="posts">        
         {questions ?
         (questions.map( (question,index) => (
                 <Question

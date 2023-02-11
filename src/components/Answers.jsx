@@ -29,9 +29,9 @@ const Answers = () => {
     return ( 
         <>
 
-        <h2>{questions && questions.find(question => question.id == questionid).question}</h2>
+        <h2 style={{textAlign:'center', color:'blue'}}>{questions && questions.find(question => question.id == questionid).question}</h2>
         
-        <div className="answers">
+        <div className="posts">
             { (answers) ?
             (answers.filter(answer => answer.questionId.toString() === questionid.toString()).map( (answer,index) => (
                 <Answer 
@@ -45,7 +45,7 @@ const Answers = () => {
             }
         </div>
 
-        {loggedInUser && <button onClick={handleNewAnswer}>Add Your Answer</button>}
+        {loggedInUser && <button className="add" onClick={handleNewAnswer} style={{color:'red'}}>ADD YOUR ANSWER</button>}
         </>
     );
 }
