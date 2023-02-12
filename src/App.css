@@ -23,7 +23,7 @@ header {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .menu {
@@ -31,6 +31,7 @@ header {
   gap: 25px;
   align-items: center;
   font-size: 2em;
+  justify-content: space-between;
 }
 
 .menuitem {
@@ -50,6 +51,7 @@ header {
 
 .userinfo {
   margin-right: 15px;
+  text-align: center;
 }
 
 /* ----LOGIN / SIGNUP / ADDQUESTION / ADDANSWER FORM--------- */
@@ -130,7 +132,7 @@ header {
 .info {
   border: 1px solid black;
   padding: 10px;
-  width: 250px;
+  width: 50%;
   margin: 10px auto;
   background-color: azure;
 }
@@ -160,4 +162,14 @@ header {
   width: 100%;
   height: 2.5rem;            /* Footer height */
   text-align: center;
-  }   
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .flex {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .menu {
+      justify-content: space-around;
+    }
+  }
