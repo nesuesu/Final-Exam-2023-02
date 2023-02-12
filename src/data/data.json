@@ -98,7 +98,8 @@
       "question": "Why don't spiders get caught in their web?",
       "userId": 3,
       "likedusers": [
-        1676142433527
+        1676142433527,
+        1
       ],
       "dislikedusers": [],
       "edited": false,
@@ -156,7 +157,7 @@
     },
     {
       "id": 1675952295028,
-      "title": "Mano klausimas",
+      "title": "mano klausimas",
       "question": "Kaip Tau sekasi???",
       "userId": 1,
       "likedusers": [
@@ -166,12 +167,12 @@
       "dislikedusers": [
         2
       ],
-      "edited": 1675952452948,
+      "edited": 1676213199534,
       "answerno": 1
     },
     {
       "id": 1676041840230,
-      "title": "Pirmas klausimas",
+      "title": "pirmas klausimas",
       "question": "Klausimas?",
       "userId": 1,
       "likedusers": [
@@ -181,7 +182,7 @@
         1676142433527
       ],
       "dislikedusers": [],
-      "edited": 1676041902789,
+      "edited": 1676213187755,
       "answerno": 1
     },
     {
@@ -191,21 +192,24 @@
       "userId": 3,
       "likedusers": [],
       "dislikedusers": [
-        1676142433527
+        1676142433527,
+        2
       ],
       "edited": false,
       "answerno": 0
     },
     {
       "id": 1676142950468,
-      "title": "dar vienas",
+      "title": "dar vienas klausimas",
       "question": "mano klausimas",
       "userId": 1676142433527,
-      "likedusers": [],
+      "likedusers": [
+        2
+      ],
       "dislikedusers": [
         1676142433527
       ],
-      "edited": false,
+      "edited": 1676213119758,
       "answerno": 0
     },
     {
@@ -214,9 +218,23 @@
       "question": "trecias neatsakytas klausimas",
       "userId": 1,
       "likedusers": [],
+      "dislikedusers": [
+        2
+      ],
+      "edited": 1676213207338,
+      "answerno": 0
+    },
+    {
+      "id": 1676215051967,
+      "title": "mano mano klausimas",
+      "question": "cia mano klausimas apie kazka",
+      "userId": 1676133872245,
+      "likedusers": [
+        1676133872245
+      ],
       "dislikedusers": [],
       "edited": false,
-      "answerno": 0
+      "answerno": 1
     }
   ],
   "answers": [
@@ -393,6 +411,15 @@
         1
       ],
       "edited": 1676145514460
+    },
+    {
+      "id": 1676215114816,
+      "questionId": "1676215051967",
+      "answer": "O cia ir atsakymas",
+      "userId": 1676133872245,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
     }
   ]
 }

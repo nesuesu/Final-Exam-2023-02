@@ -35,7 +35,7 @@ const Questions = () => {
                     sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
                     break;
                 case ('title'):
-                    sorter = (a, b) => a.title > b.title ? 1 : ( (a.title < b.title) ? -1 : 0 );
+                    sorter = (a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() < b.title.toLowerCase()) ? -1 : 0 );
                     break;
                 case ('likes'):
                     sorter = (a, b) => a.likedusers.length > b.likedusers.length ? 1 : ( (a.likedusers.length < b.likedusers.length) ? -1 : 0 );
@@ -52,7 +52,7 @@ const Questions = () => {
                     sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
                     break;
                 case ('title'):
-                    sorter = (a, b) => a.title < b.title ? 1 : ( (a.title > b.title) ? -1 : 0 );
+                    sorter = (a, b) => a.title.toLowerCase() < b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() > b.title.toLowerCase()) ? -1 : 0 );
                     break;
                 case ('likes'):
                     sorter = (a, b) => a.likedusers.length < b.likedusers.length ? 1 : ( (a.likedusers.length > b.likedusers.length) ? -1 : 0 );
@@ -93,10 +93,10 @@ const Questions = () => {
         if (selected === 'title') {
             switch (event.target.value) {
                 case ('asc'):
-                    sorter = (a, b) => a.title > b.title ? 1 : ( (a.title < b.title) ? -1 : 0 );
+                    sorter = (a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() < b.title.toLowerCase()) ? -1 : 0 );
                     break;
                 case ('desc'):
-                    sorter = (a, b) => a.title < b.title ? 1 : ( (a.title > b.title) ? -1 : 0 );
+                    sorter = (a, b) => a.title.toLowerCase() < b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() > b.title.toLowerCase()) ? -1 : 0 );
                     break;
                 default:
                     break;
@@ -121,6 +121,18 @@ const Questions = () => {
                     break;
                 case ('desc'):
                     sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
+                    break;
+                default:
+                    break;
+            }
+        };
+        if (selected === 'author') {
+            switch (event.target.value) {
+                case ('asc'):
+                    sorter = (a, b) => a.userId > b.userId ? 1 : ( (a.userId < b.userId) ? -1 : 0 );
+                    break;
+                case ('desc'):
+                    sorter = (a, b) => a.userId < b.userId ? 1 : ( (a.userId > b.userId) ? -1 : 0 );
                     break;
                 default:
                     break;
@@ -169,6 +181,7 @@ const Questions = () => {
                 <option value="title" >title</option>
                 <option value="likes" >likes</option>
                 <option value="answers" >answers</option>
+                <option value="author" >author</option>
             </select>
         </label>
         <label htmlFor="">Order:
@@ -187,7 +200,7 @@ const Questions = () => {
         {/* <input type="submit" value="Refresh"/> */}
         </form>
 
-        <div className="posts">        
+        <div className='posts'>        
         {questions ?
         (questions.map( (question,index) => (
                 <Question

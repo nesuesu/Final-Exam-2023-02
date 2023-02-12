@@ -7,9 +7,11 @@ import QuestionContext from "../contexts/QuestionContext";
 
 const Question = ({question, index}) => {
 
-    const {loggedInUser} = useContext(UserContext);
+    const {users, loggedInUser} = useContext(UserContext);
 
     const {deleteQuestion, editQuestion} = useContext(QuestionContext);
+
+    const author = users.find(user => user.id === question.userId);
 
     const navigateTo = useNavigate();
 
@@ -68,11 +70,14 @@ const Question = ({question, index}) => {
 
     return (
         <>
+        {/* {(loggedInUser && (question.userId.toString() === loggedInUser.id.toString())) && (className="selected")} */}
         <div className="post">
             <h3 style={{color:'blue'}}>{index+1}) {question.question}</h3>
             <p style={{fontStyle: 'italic', color:'blue'}}>Title: {question.title}</p>
             <div className="info">
-                <p>question id: {question.id} user id: {question.userId}</p>
+                <img style={{height:'30px'}} src={author.avatar} alt="avatar" />
+                <span style={{color:'red'}}>{author.username}</span>
+                <p>question id: {question.id} author id: {question.userId}  </p>
                 <p>number of answers: {question.answerno}</p>
                 <p style={{color:'red'}}>likes: {question.likedusers.length} dislikes: {question.dislikedusers.length} </p>
                 <p style={{color:'blue'}}>edited: {question.edited ? 'yes' : 'no'}</p>

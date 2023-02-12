@@ -11,7 +11,9 @@ const Answer = ({answer,index}) => {
 
     const { questions } = useContext(QuestionContext);
 
-    const {loggedInUser} = useContext(UserContext);
+    const {users, loggedInUser} = useContext(UserContext);
+
+    const author = users.find(user => user.id.toString() === questions.find(question => question.id.toString() === answer.questionId.toString()).userId.toString() );
 
     const navigateTo = useNavigate();
  
@@ -70,7 +72,9 @@ const Answer = ({answer,index}) => {
             {/* <h3>question : {questions.find(question => question.id.toString() === answer.questionId.toString()).question}</h3> */}
             <h3 style={{color:'black'}}>{index+1}) {answer.answer}</h3>
             <div className="info">
-                <p>answer id: {answer.id} question id: {answer.questionId} user id: {answer.userId}</p>
+                <img style={{height:'30px'}} src={author.avatar} alt="avatar" />
+                <span style={{color:'red'}}>{ author.username }</span>
+                <p>answer id: {answer.id} question id: {answer.questionId} </p>
                 <p style={{color:'red'}}>likes: {answer.likedusers.length} dislikes: {answer.dislikedusers.length} </p>
                 <p style={{color:'blue'}}>edited: {answer.edited ? 'yes' : 'no'}</p>
             </div>
