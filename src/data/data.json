@@ -22,252 +22,124 @@
       "avatar": "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
     },
     {
-      "username": "admin",
-      "password": "admin",
-      "email": "a@a.a",
-      "avatar": "https://us.123rf.com/450wm/anatolir/anatolir2011/anatolir201105528/anatolir201105528.jpg",
-      "id": 1676133872245
-    },
-    {
-      "username": "a",
-      "password": "aaa",
-      "email": "a@a.a",
-      "avatar": "https://cdn4.iconfinder.com/data/icons/essential-app-2/16/user-avatar-human-admin-login-512.png",
-      "id": 1676134169558
-    },
-    {
-      "username": "sss",
-      "password": "sss",
-      "email": "a@a.a",
-      "avatar": "",
-      "id": 1676140584621
-    },
-    {
-      "username": "fff",
-      "password": "fff",
-      "email": "a@a.a",
-      "avatar": "https://w7.pngwing.com/pngs/555/703/png-transparent-computer-icons-avatar-woman-user-avatar-face-heroes-service-thumbnail.png",
-      "id": 1676142433527
+      "username": "ddd",
+      "password": "ddd",
+      "email": "d@d.d",
+      "avatar": "https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small/beautiful-latin-woman-avatar-character-icon-free-vector.jpg",
+      "id": 1676229758976
     }
   ],
   "questions": [
     {
       "id": 1,
-      "title": "Animals",
-      "question": "What animals turn white in winter???",
+      "title": "Health",
+      "question": "Do you take some time to relax at least once a day?",
       "userId": 1,
       "likedusers": [
-        1,
-        1676131123041,
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": 1676066209780,
-      "answerno": 7
-    },
-    {
-      "id": 2,
-      "title": "Animals",
-      "question": "Are there glowing animals?",
-      "userId": 1,
-      "likedusers": [
-        1,
-        2,
-        1676131123041,
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 1
-    },
-    {
-      "id": 3,
-      "title": "Insects",
-      "question": "Can insects hear with their feet?",
-      "userId": 2,
-      "likedusers": [
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 1
-    },
-    {
-      "id": 4,
-      "title": "Insects",
-      "question": "Why don't spiders get caught in their web?",
-      "userId": 3,
-      "likedusers": [
-        1676142433527,
-        1
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 2
-    },
-    {
-      "id": 5,
-      "title": "Reptiles",
-      "question": "How to distinguish a viper from a snake?",
-      "userId": 1,
-      "likedusers": [
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 1
-    },
-    {
-      "id": 6,
-      "title": "Fish",
-      "question": "Who is heavier - an elephant or a big shark?",
-      "userId": 2,
-      "likedusers": [
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 1
-    },
-    {
-      "id": 7,
-      "title": "Birds",
-      "question": "Can birds measure temperature?",
-      "userId": 2,
-      "likedusers": [],
-      "dislikedusers": [],
-      "answerno": 1,
-      "edited": "false"
-    },
-    {
-      "id": 8,
-      "title": "Record holders of the animal world",
-      "question": "Which animal is the smartest?",
-      "userId": 3,
-      "likedusers": [
-        1,
-        3,
-        2,
-        1676131123041,
-        1676142433527
+        1676229758976
       ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 3
     },
     {
-      "id": 1675952295028,
-      "title": "mano klausimas",
-      "question": "Kaip Tau sekasi???",
-      "userId": 1,
-      "likedusers": [
-        1,
-        1676142433527
-      ],
-      "dislikedusers": [
-        2
-      ],
-      "edited": 1676213199534,
-      "answerno": 1
-    },
-    {
-      "id": 1676041840230,
-      "title": "pirmas klausimas",
-      "question": "Klausimas?",
-      "userId": 1,
-      "likedusers": [
-        1,
-        2,
-        3,
-        1676142433527
-      ],
-      "dislikedusers": [],
-      "edited": 1676213187755,
-      "answerno": 1
-    },
-    {
-      "id": 1676045217759,
-      "title": "Klausimas",
-      "question": "Pirmas mano klausimas",
-      "userId": 3,
-      "likedusers": [
-        2
-      ],
-      "dislikedusers": [
-        1676142433527
-      ],
-      "edited": false,
-      "answerno": 0
-    },
-    {
-      "id": 1676142950468,
-      "title": "dar vienas klausimas",
-      "question": "mano klausimas",
-      "userId": 1676142433527,
-      "likedusers": [
-        2,
-        1676133872245
-      ],
-      "dislikedusers": [
-        1676142433527
-      ],
-      "edited": 1676213119758,
-      "answerno": 0
-    },
-    {
-      "id": 1676145646628,
-      "title": "klausimas",
-      "question": "trecias neatsakytas klausimas",
-      "userId": 1,
-      "likedusers": [
-        2
-      ],
-      "dislikedusers": [],
-      "edited": 1676213207338,
-      "answerno": 0
-    },
-    {
-      "id": 1676215051967,
-      "title": "mano mano klausimas",
-      "question": "cia mano klausimas apie kazka",
-      "userId": 1676133872245,
-      "likedusers": [
-        1676133872245
-      ],
-      "dislikedusers": [],
-      "edited": false,
-      "answerno": 1
-    },
-    {
-      "id": 1676219267584,
-      "title": "ewfwiye5rtg354rg3",
-      "question": "iuwgfi2e ifehgf2ifh iu7ghe2fe2hg ife7gf28",
+      "id": 2,
+      "title": "Education",
+      "question": "Can anyone learn a foreign language?",
       "userId": 1,
       "likedusers": [],
-      "dislikedusers": [
-        1
-      ],
-      "edited": 1676219312464,
+      "dislikedusers": [],
+      "edited": false,
       "answerno": 2
+    },
+    {
+      "id": 3,
+      "title": "Business and Finance",
+      "question": "What Is The Difference Between E-commerce And Internet Commerce?",
+      "userId": 2,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 2
+    },
+    {
+      "id": 4,
+      "title": "Entertainment",
+      "question": "What do you do for fun?",
+      "userId": 3,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 2
+    },
+    {
+      "id": 5,
+      "title": "Entertainment",
+      "question": "What annoys you about Watches? What would you love in a watch?",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 6,
+      "title": "Shopping and Offers",
+      "question": "Which holiday is your favorite? Which is your least favorite?",
+      "userId": 2,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 7,
+      "title": "Travel",
+      "question": "What kind of vacation do you enjoy?",
+      "userId": 2,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 8,
+      "title": "Travel",
+      "question": "Is it possible to visit Antarctica?",
+      "userId": 3,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 0
+    },
+    {
+      "id": 1676230108389,
+      "title": "Age",
+      "question": "How old are you?",
+      "userId": 1,
+      "likedusers": [
+        1,
+        2
+      ],
+      "dislikedusers": [],
+      "edited": false,
+      "answerno": 1
     }
   ],
   "answers": [
     {
       "id": 1,
       "questionId": 1,
-      "answer": "Everyone knows that the hare turns white in winter. That's what they call him - a white hare. But he must not be this way by winter. The fur of the fox, ermine and weasel becomes white. Partridge turns white among the birds. But the polar bear and polar owl are white all year round.",
+      "answer": "I'm a very anxious person so its hard for me to relax although I need to.",
       "userId": 2,
-      "likedusers": [
-        2,
-        1
-      ],
+      "likedusers": [],
       "dislikedusers": [],
       "edited": false
     },
     {
       "id": 2,
-      "questionId": 2,
-      "answer": "Yes. And they are not few. Most of all luminous animals live in the seas and oceans. Glow in the dark jellyfish, coral polyps, cephalopods, ciliates-night-lighters and many deep-sea fish. Among the inhabitants of the land, the well-known firefly beetles glow.",
+      "questionId": 1,
+      "answer": "Everyday! Some days all day!",
       "userId": 3,
       "likedusers": [],
       "dislikedusers": [],
@@ -275,8 +147,8 @@
     },
     {
       "id": 3,
-      "questionId": 3,
-      "answer": "Grasshoppers have such amazing abilities. The organs of hearing are located on their shins of the front legs.",
+      "questionId": 2,
+      "answer": "Hi there! Of course, with the number of specialised software that are out there, it’s very easy for anyone to learn any foreign language that they might be interested in. I have myself managed to learn Hindi, Chinese and Malay using one of these software.",
       "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
@@ -284,8 +156,8 @@
     },
     {
       "id": 4,
-      "questionId": 4,
-      "answer": "Spiders make two kinds of webs. Some are sticky, into which various insects fall. Others are not sticky. Spiders move along them. It happens that a spider gets into a sticky cobweb, but gets out of it thanks to the fatty coating on its body.",
+      "questionId": 2,
+      "answer": "Yes. You should not expect it to be easy but anyone can learn a second language just like anyone can learn a first language.",
       "userId": 2,
       "likedusers": [],
       "dislikedusers": [],
@@ -293,8 +165,8 @@
     },
     {
       "id": 5,
-      "questionId": 5,
-      "answer": "The pupil of a snake is round, while that of a viper is like a slit and is located vertically. These snakes differ in color. On the back of the viper, a zigzag pattern is clearly visible. Although there are one-colored vipers. But their main difference is that there are bright yellow spots on the sides of the snake's head, while the viper does not have them.",
+      "questionId": 3,
+      "answer": "Hi! There is no such difference between E-Commerce and internet commerce they shows same meaning about buying and selling products and services with the use of electronic systems such as the internet",
       "userId": 3,
       "likedusers": [],
       "dislikedusers": [],
@@ -302,17 +174,17 @@
     },
     {
       "id": 6,
-      "questionId": 6,
-      "answer": "It may seem strange, but the weight of a large shark is many times greater than the weight of a large elephant. An elephant weighs only 6 tons. But big whale sharks come across weighing up to 30 tons!",
-      "userId": 3,
+      "questionId": 3,
+      "answer": "E-commerce is basically business through your web. You can sell any product online. In this you can mention your product online. Internet commerce is business communication through internet. In this you and other party communicate using internet.",
+      "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false
     },
     {
       "id": 7,
-      "questionId": 7,
-      "answer": "One of the birds, although it does not incubate eggs, still cares about the temperature in the incubator nest. They measure the temperature... What do you think? Beak! These amazing birds are called Australian weed chickens.",
+      "questionId": 4,
+      "answer": "Hi, so I like to play games with the kids in my family. I play games such as hide and seek, Snakes and Ladder. It reminds me of my childhood whenever I spend time with them.",
       "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
@@ -320,138 +192,37 @@
     },
     {
       "id": 8,
-      "questionId": 8,
-      "answer": "Many scholars debate this issue. The most intelligent include several animals. This is a killer whale and many species of dolphins. Elephants and pigs are also considered very smart. Yet the most intelligent are primates (chimpanzees, gorillas, orangutans, baboons, gibbons and monkeys). They have a large, complex brain, can communicate with each other, and they have developed certain language skills, they know how to learn some actions and use objects as tools (for example, dig the ground with a stick or knock fruit from trees with it).",
+      "questionId": 4,
+      "answer": "Hiking, traveling and music are my top three.",
       "userId": 2,
-      "likedusers": [
-        1676131123041
-      ],
+      "likedusers": [],
       "dislikedusers": [],
       "edited": false
     },
     {
-      "id": 1675953490821,
+      "id": 1676229884839,
       "questionId": "1",
-      "answer": "i don't know",
-      "userId": 1,
-      "likedusers": [],
+      "answer": "not a once a day",
+      "userId": 1676229758976,
+      "likedusers": [
+        1676229758976
+      ],
       "dislikedusers": [
-        1,
-        3
-      ],
-      "edited": false
-    },
-    {
-      "id": 1676014131922,
-      "questionId": "1",
-      "answer": "trecias atsakymas",
-      "userId": 3,
-      "likedusers": [
-        3
-      ],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676014200577,
-      "questionId": "1",
-      "answer": "ketvirtas",
-      "userId": 3,
-      "likedusers": [
-        1
-      ],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676014585301,
-      "questionId": "2",
-      "answer": "I don't know",
-      "userId": 2,
-      "likedusers": [],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676041663696,
-      "questionId": "1",
-      "answer": "penktas klausimas",
-      "userId": 1,
-      "likedusers": [
         1,
         2
       ],
-      "dislikedusers": [],
       "edited": false
     },
     {
-      "id": 1676041861493,
-      "questionId": "1676041840230",
-      "answer": "pirmas atsakymas",
-      "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676044588084,
-      "questionId": "1675952295028",
-      "answer": "Pabandom iš naujo",
-      "userId": 3,
+      "id": 1676230352829,
+      "questionId": "1676230108389",
+      "answer": "My age is 18 always!",
+      "userId": 2,
       "likedusers": [
-        3
+        2
       ],
       "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676138234922,
-      "questionId": "1",
-      "answer": "3fo 904u049u oef2h42",
-      "userId": 1,
-      "likedusers": [
-        1
-      ],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676145310036,
-      "questionId": "1",
-      "answer": "My answer edited",
-      "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [
-        1
-      ],
-      "edited": 1676145514460
-    },
-    {
-      "id": 1676215114816,
-      "questionId": "1676215051967",
-      "answer": "O cia ir atsakymas",
-      "userId": 1676133872245,
-      "likedusers": [],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676219356047,
-      "questionId": "1676219267584",
-      "answer": "ef2iu efh29h i8ehy29f8h2f",
-      "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [],
-      "edited": false
-    },
-    {
-      "id": 1676219368753,
-      "questionId": "1676219267584",
-      "answer": "r3erh34",
-      "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [],
-      "edited": false
+      "edited": 1676230389091
     }
   ]
 }
