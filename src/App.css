@@ -23,7 +23,7 @@ header {
 
 .flex {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .menu {
@@ -31,7 +31,6 @@ header {
   gap: 25px;
   align-items: center;
   font-size: 2em;
-  justify-content: space-between;
 }
 
 .menuitem {
@@ -140,7 +139,7 @@ header {
 .users {
   border: 1px solid black;
   display: block;
-  width: 250px;
+  width: 350px;
   margin:50px auto;
   padding: 25px;
 }
@@ -171,5 +170,11 @@ header {
     }
     .menu {
       justify-content: space-around;
+    }
+    .logo {
+      text-align: center;
+    }
+    .login {
+      text-align: center;
     }
   }
