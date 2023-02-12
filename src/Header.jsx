@@ -23,7 +23,8 @@ const Header = () => {
             </div>
 
             <div className='menu'>
-                <Link to={'/questions'} style={{textDecoration:'none'}}>Questions</Link>
+                <Link to={'/questions'} className='menuitem'>Questions</Link>
+                <Link to={'/users'} className='menuitem' >Users</Link>
                 {/* <Link to={'/addquestion'}>Add question</Link>
                 <Link to={'/answers'}>Answers</Link>
                 <Link to={'/addanswer'}>Add Answer</Link> */}

@@ -190,10 +190,11 @@
       "title": "Klausimas",
       "question": "Pirmas mano klausimas",
       "userId": 3,
-      "likedusers": [],
-      "dislikedusers": [
-        1676142433527,
+      "likedusers": [
         2
+      ],
+      "dislikedusers": [
+        1676142433527
       ],
       "edited": false,
       "answerno": 0
@@ -204,7 +205,8 @@
       "question": "mano klausimas",
       "userId": 1676142433527,
       "likedusers": [
-        2
+        2,
+        1676133872245
       ],
       "dislikedusers": [
         1676142433527
@@ -217,10 +219,10 @@
       "title": "klausimas",
       "question": "trecias neatsakytas klausimas",
       "userId": 1,
-      "likedusers": [],
-      "dislikedusers": [
+      "likedusers": [
         2
       ],
+      "dislikedusers": [],
       "edited": 1676213207338,
       "answerno": 0
     },
@@ -235,6 +237,18 @@
       "dislikedusers": [],
       "edited": false,
       "answerno": 1
+    },
+    {
+      "id": 1676219267584,
+      "title": "ewfwiye5rtg354rg3",
+      "question": "iuwgfi2e ifehgf2ifh iu7ghe2fe2hg ife7gf28",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [
+        1
+      ],
+      "edited": 1676219312464,
+      "answerno": 2
     }
   ],
   "answers": [
@@ -417,6 +431,24 @@
       "questionId": "1676215051967",
       "answer": "O cia ir atsakymas",
       "userId": 1676133872245,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676219356047,
+      "questionId": "1676219267584",
+      "answer": "ef2iu efh29h i8ehy29f8h2f",
+      "userId": 1,
+      "likedusers": [],
+      "dislikedusers": [],
+      "edited": false
+    },
+    {
+      "id": 1676219368753,
+      "questionId": "1676219267584",
+      "answer": "r3erh34",
+      "userId": 1,
       "likedusers": [],
       "dislikedusers": [],
       "edited": false

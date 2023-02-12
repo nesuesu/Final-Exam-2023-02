@@ -1,0 +1,157 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "aaa",
+      "email": "one@aaa.com",
+      "password": "123",
+      "avatar":"https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Image-File.png"
+    },
+    {
+      "id": 2,
+      "username": "bbb",
+      "email": "two@bbb.com",
+      "password": "456",
+      "avatar":"https://www.shareicon.net/data/512x512/2016/09/15/829452_user_512x512.png"
+    },
+    {
+      "id": 3,
+      "username": "ccc",
+      "email": "three@ccc.com",
+      "password": "789",
+      "avatar":"https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small_2x/man-with-beard-avatar-character-isolated-icon-free-vector.jpg"
+    }    
+  ],
+  "questions": [
+    {
+      "id": 1,
+      "title": "Health",
+      "question": "Do you take some time to relax at least once a day?",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 2,
+      "title": "Education",
+      "question": "Can anyone learn a foreign language?",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 3,
+      "title": "Business and Finance",
+      "question": "What Is The Difference Between E-commerce And Internet Commerce?",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 4,
+      "title": "Entertainment",
+      "question": "What do you do for fun?",
+      "userId": 3,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 5,
+      "title": "Entertainment",
+      "question": "What annoys you about Watches? What would you love in a watch?",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 6,
+      "title": "Shopping and Offers",
+      "question": "Which holiday is your favorite? Which is your least favorite?",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 7,
+      "title": "Travel",
+      "question": "What kind of vacation do you enjoy?",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 8,
+      "title": "Travel",
+      "question": "Is it possible to visit Antarctica?",
+      "userId": 3,
+      "likesno": 0,
+      "edited": "false"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "questionId": 1,
+      "answer": "I'm a very anxious person so its hard for me to relax although I need to.",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 2,
+      "questionId": 1,
+      "answer": "Everyday! Some days all day!",
+      "userId": 3,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 3,
+      "questionId": 2,
+      "answer": "Hi there! Of course, with the number of specialised software that are out there, it’s very easy for anyone to learn any foreign language that they might be interested in. I have myself managed to learn Hindi, Chinese and Malay using one of these software.",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 4,
+      "questionId": 2,
+      "answer": "Yes. You should not expect it to be easy but anyone can learn a second language just like anyone can learn a first language.",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 5,
+      "questionId": 3,
+      "answer": "Hi! There is no such difference between E-Commerce and internet commerce they shows same meaning about buying and selling products and services with the use of electronic systems such as the internet",
+      "userId": 3,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 6,
+      "questionId": 3,
+      "answer": "E-commerce is basically business through your web. You can sell any product online. In this you can mention your product online. Internet commerce is business communication through internet. In this you and other party communicate using internet.",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 7,
+      "questionId": 4,
+      "answer": "Hi, so I like to play games with the kids in my family. I play games such as hide and seek, Snakes and Ladder. It reminds me of my childhood whenever I spend time with them.",
+      "userId": 1,
+      "likesno": 0,
+      "edited": "false"
+    },
+    {
+      "id": 8,
+      "questionId": 4,
+      "answer": "Hiking, traveling and music are my top three.",
+      "userId": 2,
+      "likesno": 0,
+      "edited": "false"
+    }
+  ]
+}

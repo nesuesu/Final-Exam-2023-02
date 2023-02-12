@@ -33,6 +33,13 @@ header {
   font-size: 2em;
 }
 
+.menuitem {
+  text-decoration: none; 
+  border: 1px solid black;
+  padding: 5px;
+  background-color: azure;
+}
+
 .login {
   display: flex;
   flex-direction: column;
@@ -123,9 +130,17 @@ header {
 .info {
   border: 1px solid black;
   padding: 10px;
-  width: 50%;
+  width: 250px;
   margin: 10px auto;
   background-color: azure;
+}
+
+.users {
+  border: 1px solid black;
+  display: block;
+  width: 250px;
+  margin:50px auto;
+  padding: 25px;
 }
 
 /* -----------FOOTER--------------- */
