@@ -97,6 +97,7 @@ header {
 
 .filters {
   padding: 15px;
+  text-align: center;
 }
 
 .filters select {
