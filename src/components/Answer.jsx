@@ -13,8 +13,6 @@ const Answer = ({answer,index}) => {
 
     const {users, loggedInUser} = useContext(UserContext);
 
-    const author = users.find(user => user.id.toString() === questions.find(question => question.id.toString() === answer.questionId.toString()).userId.toString() );
-
     const navigateTo = useNavigate();
  
     const handleEdit = () => {
@@ -72,8 +70,8 @@ const Answer = ({answer,index}) => {
             {/* <h3>question : {questions.find(question => question.id.toString() === answer.questionId.toString()).question}</h3> */}
             <h3 style={{color:'black'}}>{index+1}) {answer.answer}</h3>
             <div className="info">
-                <img style={{height:'30px'}} src={author.avatar} alt="avatar" />
-                <span style={{color:'red'}}>{ author.username }</span>
+                <img style={{height:'30px'}} src={users.find(user => user.id.toString() === answer.userId.toString()).avatar} alt="avatar" />
+                <span style={{color:'red'}}>user id: { answer.userId }</span>
                 <p>answer id: {answer.id} question id: {answer.questionId} </p>
                 <p style={{color:'red'}}>likes: {answer.likedusers.length} dislikes: {answer.dislikedusers.length} </p>
                 <p style={{color:'blue'}}>edited: {answer.edited ? 'yes' : 'no'}</p>
