@@ -1,13 +1,17 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import UserContext from "./contexts/UserContext";
 
 const UserInfo = () => {
 
     const {loggedInUser, setLoggedInUser} = useContext(UserContext); 
 
+    const navigateTo = useNavigate();
+
     const logOut = () => {
         setLoggedInUser(null);
         sessionStorage.clear();
+        navigateTo('/questions');
     }
 
     return (

@@ -24,7 +24,7 @@ const Users = () => {
                     </div>
                     )))
             :
-            (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
+            <h1 style={{color:'blue'}}>PLEASE LOGIN FOR USERS DATA</h1>
             }
         </div>
         </>
