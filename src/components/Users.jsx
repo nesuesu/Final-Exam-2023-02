@@ -19,7 +19,7 @@ const Users = () => {
                     // { (user.id === loggedInUser.id) && `style={{backgroundColor:'red'}}` }
                     <div key={index}>
                         <img style={{height:'30px'}} src={user.avatar} alt="avatar" />
-                        <span> username: {user.username} - password: {user.password}</span>
+                        <span> username: {user.username} - password: {user.password} - id: {user.id}</span>
                         <hr />
                     </div>
                     )))

@@ -35,7 +35,7 @@ const Login = () => {
             if (logged) {   
                 setLoggedInUser(logged);
                 sessionStorage.setItem('loggedInUser', JSON.stringify(logged)); 
-                navigateTo(-1);
+                navigateTo('/questions');
             } else {
                 alert('Wrong username or password')
                 actions.resetForm();

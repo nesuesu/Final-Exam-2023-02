@@ -12,7 +12,7 @@ import Question from "./Question";
 const Questions = () => {
 
     const {questions, setQuestions} = useContext(QuestionContext);
-    const {loggedInUser} = useContext(UserContext);
+    const {users, loggedInUser} = useContext(UserContext);
 
     const navigateTo = useNavigate();
 
@@ -129,10 +129,10 @@ const Questions = () => {
         if (selected === 'author') {
             switch (event.target.value) {
                 case ('asc'):
-                    sorter = (a, b) => a.userId > b.userId ? 1 : ( (a.userId < b.userId) ? -1 : 0 );
+                    sorter = (a, b) => users.find(user => user.id.toString() === a.userId.toString()).username > users.find(user => user.id.toString() === b.userId.toString()).username ? 1 : ( (users.find(user => user.id.toString() === a.userId.toString()).username < users.find(user => user.id.toString() === b.userId.toString()).username) ? -1 : 0 );
                     break;
                 case ('desc'):
-                    sorter = (a, b) => a.userId < b.userId ? 1 : ( (a.userId > b.userId) ? -1 : 0 );
+                    sorter = (a, b) => users.find(user => user.id.toString() === a.userId.toString()).username < users.find(user => user.id.toString() === b.userId.toString()).username ? 1 : ( (users.find(user => user.id.toString() === a.userId.toString()).username > users.find(user => user.id.toString() === b.userId.toString()).username) ? -1 : 0 );
                     break;
                 default:
                     break;

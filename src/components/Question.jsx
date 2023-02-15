@@ -12,6 +12,7 @@ const Question = ({question, index}) => {
     const {deleteQuestion, editQuestion} = useContext(QuestionContext);
 
     const author = users.find(user => user.id === question.userId);
+    
 
     const navigateTo = useNavigate();
 
@@ -71,6 +72,7 @@ const Question = ({question, index}) => {
     return (
         <>
         {/* {(loggedInUser && (question.userId.toString() === loggedInUser.id.toString())) && (className="selected")} */}
+        
         <div className="post">
             <h3 style={{color:'blue'}}>{index+1}) {question.question}</h3>
             <p style={{fontStyle: 'italic', color:'blue'}}>Title: {question.title}</p>

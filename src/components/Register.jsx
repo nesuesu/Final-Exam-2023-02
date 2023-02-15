@@ -53,7 +53,7 @@ const Register = () => {
                 setUsers([...users, data]);
                 postUser(data); // !!!!!!!!!!!!!!!!!!!!
                 setLoggedInUser(data);
-                sessionStorage.setItem('dataInUser', JSON.stringify(data)); 
+                sessionStorage.setItem('loggedInUser', JSON.stringify(data)); 
                 navigateTo('/questions');
             } else {
                 alert('The username you have entered exists');

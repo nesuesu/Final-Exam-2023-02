@@ -9,11 +9,10 @@ const UserProvider = ({children}) => {
 
     const [users, setUsers] = useState(null);
 
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    // const [loggedInUser, setLoggedInUser] = useState();
     // loggedInUser - kreipiamės į sessionStorage ir į state kintamąjį loggedInUser įrašome username duomenis iš users arba undefined (jeigu nerandame)
     const [loggedInUser, setLoggedInUser] = useState(sessionStorage.getItem('loggedInUser') ? JSON.parse(sessionStorage.getItem('loggedInUser')) : null);
+    // const [loggedInUser, setLoggedInUser] = useState();
+    // setLoggedInUser(JSON.parse(sessionStorage.getItem('loggedInUser')));
 
 
     // STATE FUNCTIONS
@@ -42,6 +41,7 @@ const UserProvider = ({children}) => {
     }
 
     useEffect(() => {
+        // setLoggedInUser(JSON.parse(sessionStorage.getItem('loggedInUser')));
         getUsers();
     }, []);
 
@@ -50,8 +50,6 @@ const UserProvider = ({children}) => {
             value={{
                 users,
                 setUsers,
-                isLoggedIn,
-                setIsLoggedIn,
                 loggedInUser, 
                 setLoggedInUser,
                 addUser,
