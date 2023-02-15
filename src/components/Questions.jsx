@@ -93,7 +93,7 @@ const Questions = () => {
         {loggedInUser && <button className="add" onClick={handleNewQuestion} style={{color:'red'}}>ADD YOUR QUESTION</button>}
 
         <form className="filters">
-        <label htmlFor="">Sort by: 
+        <label >Sort by: 
             <select values={sortMethod} onChange={(e) => setSortMethod(e.target.value)} name="sort" id="">
                 <option value="date" >date</option>
                 <option value="title" >title</option>
@@ -102,13 +102,13 @@ const Questions = () => {
                 <option value="author" >author</option>
             </select>
         </label>
-        <label htmlFor="">Order:
+        <label >Order:
             <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} name="order" id="">
                 <option value="asc">ascending</option>
                 <option value="desc">descending</option>
             </select>
         </label>
-        <label htmlFor="">Filter:
+        <label >Filter:
             <select value={filterQuestions} onChange={(e) => setFilterQuestions(e.target.value)} name="filter" id="">
                 <option value="allquestions">All Questions</option>
                 <option value="answered">Answered Questions</option>
