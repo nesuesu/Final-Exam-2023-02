@@ -118,7 +118,7 @@ const Questions = () => {
         </form>
 
         <div className='posts'>        
-            { questions ?
+            { (questions && users ) ?
             (sortQuestions(filteredQuestions(questions)).map( (question,index) => (
                     <Question
                         key = {index}
