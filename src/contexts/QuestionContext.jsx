@@ -55,6 +55,8 @@ const QuestionProvider = ({children}) => {
             });
           }
 
+
+
         // ant pirmo užkrovimo atsisiunčiam visus klausimus iš json serverio ir įsirašom juos į state kintamąjį questions
         const getQuestions = async () => {
             const data = await fetch(url)
@@ -65,6 +67,20 @@ const QuestionProvider = ({children}) => {
         useEffect(() => {
             getQuestions();
         }, []);
+
+
+        // useEffect(() => {
+        //     fetch(url)
+        //       .then(res => res.json())
+        //       .then(data => {
+        //         setQuestions(data);
+        //       })
+        //       .catch(error => {
+        //         console.error(error);
+        //       });
+        //   }, []);
+
+
 
     return (
         <QuestionContext.Provider

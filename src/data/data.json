@@ -114,7 +114,9 @@
       "title": "Travel",
       "question": "Is it possible to visit Antarctica?",
       "userId": 3,
-      "likedusers": [],
+      "likedusers": [
+        1
+      ],
       "dislikedusers": [],
       "edited": false,
       "answerno": 0

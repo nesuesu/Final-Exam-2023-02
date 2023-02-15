@@ -11,26 +11,19 @@ import Question from "./Question";
 
 const Questions = () => {
 
-    const {questions, setQuestions} = useContext(QuestionContext);
+    const {questions} = useContext(QuestionContext);
     const {users, loggedInUser} = useContext(UserContext);
 
     const navigateTo = useNavigate();
 
-    const handleNewQuestion = () => {
-        navigateTo('/addquestion');
-    }
+    const [sortMethod, setSortMethod] = useState('date');
+    const [sortOrder, setSortOrder] = useState('asc');
+    const [filterQuestions, setFilterQuestions] = useState('allquestions');
 
-
-    const [selected, setSelected] = useState('date');
-
-    const handleChange = event => {
-        console.log(event.target.value);
-        setSelected(event.target.value);
-
+    const sortQuestions = (qqq) => {
         let sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
-
-        if (selectedOrder === 'asc') {
-            switch (event.target.value) {
+        if (sortOrder === 'asc') {
+            switch (sortMethod) {
                 case ('date'):
                     sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
                     break;
@@ -40,14 +33,17 @@ const Questions = () => {
                 case ('likes'):
                     sorter = (a, b) => a.likedusers.length > b.likedusers.length ? 1 : ( (a.likedusers.length < b.likedusers.length) ? -1 : 0 );
                     break;
-                case ('answer'):
+                case ('answers'):
                     sorter = (a, b) => a.answerno > b.answerno ? 1 : ( (a.answerno < b.answerno) ? -1 : 0 );
+                    break;
+                case ('author'):
+                    sorter = (a, b) => users.find(user => user.id.toString() === a.userId.toString()).username > users.find(user => user.id.toString() === b.userId.toString()).username ? 1 : ( (users.find(user => user.id.toString() === a.userId.toString()).username < users.find(user => user.id.toString() === b.userId.toString()).username) ? -1 : 0 );
                     break;
                 default:
                     break;
             }
-        } else if (selectedOrder === 'desc') {
-            switch (event.target.value) {
+        } else if (sortOrder === 'desc') {
+            switch (sortMethod) {
                 case ('date'):
                     sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
                     break;
@@ -60,115 +56,37 @@ const Questions = () => {
                 case ('answers'):
                     sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
                     break;
-                default:
-                    break;
-            }
-        }
-        const sorted = [...questions];
-        sorted.sort(sorter);
-        setQuestions(sorted);
-    };
-
-    
-    const [selectedOrder, setSelectedOrder] = useState('asc');
-
-    const handleChangeOrder = event => {
-        console.log(event.target.value);
-        setSelectedOrder(event.target.value);
-
-        let sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
-
-        if (selected === 'date') {
-            switch (event.target.value) {
-                case ('asc'):
-                    sorter = (a, b) => a.id > b.id ? 1 : ( (a.id < b.id) ? -1 : 0 );
-                    break;
-                case ('desc'):
-                    sorter = (a, b) => a.id < b.id ? 1 : ( (a.id > b.id) ? -1 : 0 );
-                    break;
-                default:
-                    break;
-            }
-        };
-        if (selected === 'title') {
-            switch (event.target.value) {
-                case ('asc'):
-                    sorter = (a, b) => a.title.toLowerCase() > b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() < b.title.toLowerCase()) ? -1 : 0 );
-                    break;
-                case ('desc'):
-                    sorter = (a, b) => a.title.toLowerCase() < b.title.toLowerCase() ? 1 : ( (a.title.toLowerCase() > b.title.toLowerCase()) ? -1 : 0 );
-                    break;
-                default:
-                    break;
-            }
-        };
-        if (selected === 'likes') {
-            switch (event.target.value) {
-                case ('asc'):
-                    sorter = (a, b) => a.likedusers.length > b.likedusers.length ? 1 : ( (a.likedusers.length < b.likedusers.length) ? -1 : 0 );
-                    break;
-                case ('desc'):
-                    sorter = (a, b) => a.likedusers.length < b.likedusers.length ? 1 : ( (a.likedusers.length > b.likedusers.length) ? -1 : 0 );
-                    break;
-                default:
-                    break;
-            }
-        };
-        if (selected === 'answers') {
-            switch (event.target.value) {
-                case ('asc'):
-                    sorter = (a, b) => a.answerno > b.answerno ? 1 : ( (a.answerno < b.answerno) ? -1 : 0 );
-                    break;
-                case ('desc'):
-                    sorter = (a, b) => a.answerno < b.answerno ? 1 : ( (a.answerno > b.answerno) ? -1 : 0 );
-                    break;
-                default:
-                    break;
-            }
-        };
-        if (selected === 'author') {
-            switch (event.target.value) {
-                case ('asc'):
-                    sorter = (a, b) => users.find(user => user.id.toString() === a.userId.toString()).username > users.find(user => user.id.toString() === b.userId.toString()).username ? 1 : ( (users.find(user => user.id.toString() === a.userId.toString()).username < users.find(user => user.id.toString() === b.userId.toString()).username) ? -1 : 0 );
-                    break;
-                case ('desc'):
+                case ('author'):
                     sorter = (a, b) => users.find(user => user.id.toString() === a.userId.toString()).username < users.find(user => user.id.toString() === b.userId.toString()).username ? 1 : ( (users.find(user => user.id.toString() === a.userId.toString()).username > users.find(user => user.id.toString() === b.userId.toString()).username) ? -1 : 0 );
                     break;
                 default:
                     break;
             }
-        };
-        const sorted = [...questions];
-        sorted.sort(sorter);
-        setQuestions(sorted);
-    };
+        }
+        return qqq.sort(sorter);
+    }
 
-
-        const [selectedFilter, setSelectedFilter] = useState('allquestions');
-        
-        const handleChangeFilter = (e) => {
-            console.log(e.target.value);
-            setSelectedFilter(e.target.value);
-
-            let sorted = [...questions];
-
-            switch (e.target.value) {
+    const filteredQuestions = (questions) => {
+        const q = questions.filter((question) => { 
+            switch (filterQuestions) {
                 case ('allquestions'):
-                    sorted = questions;
-                    window.location.reload();
-                    break;
+                    return true;
                 case ('answered'):
-                    sorted = questions.filter(question => question.answerno > 0);
-                    break;
+                    if (question.answerno > 0) return true;
+                    else return false;
                 case ('unanswered'):
-                    sorted = questions.filter(question => question.answerno === 0);
-                    break;
+                    if (question.answerno === 0) return true;
+                    else return false;
                 default:
                     break;
             }
-            setQuestions(sorted);
-        }
+        });
+        return q;
+    }
 
+    const handleNewQuestion = () => {
+        navigateTo('/addquestion');
+    }
 
     return (
         <>
@@ -176,7 +94,7 @@ const Questions = () => {
 
         <form className="filters">
         <label htmlFor="">Sort by: 
-            <select values={selected} onChange={handleChange} name="sort" id="">
+            <select values={sortMethod} onChange={(e) => setSortMethod(e.target.value)} name="sort" id="">
                 <option value="date" >date</option>
                 <option value="title" >title</option>
                 <option value="likes" >likes</option>
@@ -185,33 +103,33 @@ const Questions = () => {
             </select>
         </label>
         <label htmlFor="">Order:
-            <select value={selectedOrder} onChange={handleChangeOrder} name="order" id="">
+            <select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)} name="order" id="">
                 <option value="asc">ascending</option>
                 <option value="desc">descending</option>
             </select>
         </label>
         <label htmlFor="">Filter:
-            <select value={selectedFilter} onChange={handleChangeFilter} name="filter" id="">
+            <select value={filterQuestions} onChange={(e) => setFilterQuestions(e.target.value)} name="filter" id="">
                 <option value="allquestions">All Questions</option>
                 <option value="answered">Answered Questions</option>
                 <option value="unanswered">Unanswered Questions</option>
             </select>
         </label>
-        {/* <input type="submit" value="Refresh"/> */}
         </form>
 
         <div className='posts'>        
-        {questions ?
-        (questions.map( (question,index) => (
-                <Question
-                    key = {index}
-                    question = {question}
-                    index = {index}
-                />
-                )))
-        :
-        (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
-        }
+            { questions ?
+            (sortQuestions(filteredQuestions(questions)).map( (question,index) => (
+                    <Question
+                        key = {index}
+                        question = {question}
+                        index = {index}
+                    />
+                    ))
+            )
+            :
+            (<img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="loading" />)
+            }
         </div>
         </>
     );
